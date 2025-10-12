@@ -5,15 +5,35 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "SF UI Display", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f8f9fa;
-  color: #333;
+  color: black;
+  font-weight: 300;
 }
 
 #root {
   min-height: 100vh;
+}
+
+.hero-section {
+  background-image: url("/src/assets/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.keyfunc-section {
+  background-image: url("/src/assets/keyfunc-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.steps-and-rates-section {
+  background-image: url("/src/assets/keyfunc-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
