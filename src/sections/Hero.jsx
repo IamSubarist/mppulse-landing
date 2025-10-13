@@ -1,9 +1,12 @@
 import { Switch } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import HeroImg from "../assets/hero-img.png";
 import Header from "../components/Header";
+import Modal from "../components/Modal/Modal";
+import ModalContent from "../components/Modal/ModalContent";
 
 export const Hero = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="hero-section px-[360px] relative">
       <Header />
@@ -103,7 +106,10 @@ export const Hero = () => {
               </p>
             </div>
           </div>
-          <div className="ml-[10px] z-10 absolute flex items-center justify-end top-1/2 -translate-y-1/2 left-0 w-[561.96px] h-[91.52px] rounded-[17.57px] border border-[#4ABCFF]">
+          <div
+            onClick={() => setIsOpen(true)}
+            className="ml-[10px] z-10 absolute flex items-center justify-end top-1/2 -translate-y-1/2 left-0 w-[561.96px] h-[91.52px] rounded-[17.57px] border border-[#4ABCFF]"
+          >
             <p className="max-w-[140.28px] text-[#335873] text-[12px] font-medium pr-[7.7px] leading-[125%] tracking-[-0.3px]">
               За 3 дня ассистент оптимизирует все ваши рекламные кампании и
               оцифрует кабинет
@@ -112,6 +118,9 @@ export const Hero = () => {
         </div>
       </div>
       <img className="absolute top-[105px] right-25" src={HeroImg} alt="hero" />
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <ModalContent variant={"monitoring"} />
+      </Modal>
     </div>
   );
 };
