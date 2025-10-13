@@ -1,10 +1,12 @@
 import { Switch } from "antd";
 import React from "react";
 import HeroImg from "../assets/hero-img.png";
+import Header from "../components/Header";
 
 export const Hero = () => {
   return (
     <div className="hero-section px-[360px] relative">
+      <Header />
       <div className="flex flex-col max-w-[780.93px] mt-1">
         <p className="text-[47.04px] leading-[114%] mb-[24.15px] tracking-[-0.6px]">
           Ваш личный{" "}
@@ -109,7 +111,7 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      <img className="absolute -top-8 right-25" src={HeroImg} alt="hero" />
+      <img className="absolute top-[105px] right-25" src={HeroImg} alt="hero" />
     </div>
   );
 };
