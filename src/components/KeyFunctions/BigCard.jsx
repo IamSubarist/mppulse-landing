@@ -1,5 +1,5 @@
 import React from "react";
-import { BigCardItemsCardMobile } from "./BigCardItemsCArdMobile";
+import { BigCardItemsCardMobile } from "./BigCardItemsCardMobile";
 
 export const BigCard = () => {
   return (
