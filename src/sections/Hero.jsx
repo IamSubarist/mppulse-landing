@@ -4,6 +4,7 @@ import HeroImg from "../assets/hero-img.png";
 import Header from "../components/Header";
 import Modal from "../components/Modal/Modal";
 import ModalContent from "../components/Modal/ModalContent";
+import ModalSlider from "../components/Modal/ModalSlider";
 
 export const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -119,7 +120,8 @@ export const Hero = () => {
       </div>
       <img className="absolute top-[105px] right-25" src={HeroImg} alt="hero" />
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <ModalContent variant={"monitoring"} />
+        {/* <ModalContent variant={"monitoring"} /> */}
+        <ModalSlider />
       </Modal>
     </div>
   );
