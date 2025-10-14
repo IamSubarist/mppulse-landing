@@ -4,7 +4,7 @@ import { RateCard } from "../components/StepsAndRates/RateCard";
 
 export const StepsAndRates = () => {
   return (
-    <div className="bg-blue-600 steps-and-rates-section px-[360px] relative h-[1890px]">
+    <div className="bg-blue-600 steps-and-rates-section px-[360px] relative h-[1349px]">
       <div className="absolute -top-[148px] left-1/2 -translate-x-1/2">
         <BigCard />
       </div>

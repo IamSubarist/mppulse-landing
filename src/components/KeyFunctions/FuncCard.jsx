@@ -3,12 +3,12 @@ import React from "react";
 export const FuncCard = ({ title, description, data }) => {
   return (
     <div className="relative flex flex-col items-center justify-center">
-      <div className="shadow-xl w-[380px] rounded-[25px] bg-white flex flex-col px-[44px] py-[44px] gap-[30px]">
+      <div className="z-20 shadow-xl rounded-[25px] bg-white flex flex-col min-[768px]:px-[40px] min-[1600px]:px-[44px] py-[44px] gap-[30px]">
         <div className="flex flex-col gap-[13px]">
-          <p className="text-[#1D1D1D] text-[24px] font-bold leading-[110%] tracking-[-0.6px]">
+          <p className="text-[#1D1D1D] min-[768px]:text-[21.51px] min-[1600px]:text-[24px] font-bold leading-[110%] tracking-[-0.6px]">
             {title}
           </p>
-          <p className="text-black opacity-50 text-[14px] leading-[135%] tracking-[-0.3px]">
+          <p className="text-black opacity-50 min-[768px]:text-[12.55px] min-[1600px]:text-[14px] leading-[135%] tracking-[-0.3px]">
             {description}
           </p>
         </div>
@@ -16,7 +16,7 @@ export const FuncCard = ({ title, description, data }) => {
           {data.map((item) => (
             <div className="flex items-start gap-2 relative pl-1">
               <div className="absolute top-2 -left-[10px] !size-[6px] rounded-full bg-[#4C3AFF]"></div>
-              <p className="text-[15px] leading-[135%] text-[#1D1D1D]">
+              <p className="min-[768px]:text-[13.44px] min-[1600px]:text-[15px] leading-[135%] text-[#1D1D1D]">
                 {item}
               </p>
             </div>
@@ -46,7 +46,7 @@ export const FuncCard = ({ title, description, data }) => {
           </button>
         </div>
       </div>
-      <div className="shadow-xl -z-10 absolute top-0 right-1/2 translate-x-1/2 w-[340px] h-[calc(100%+15px)] rounded-[25px] bg-white opacity-50"></div>
+      <div className="shadow-xl z-10 absolute top-0 right-1/2 translate-x-1/2 w-[340px] h-[calc(100%+15px)] rounded-[25px] bg-white opacity-50"></div>
     </div>
   );
 };

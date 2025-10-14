@@ -10,7 +10,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="py-[38px] flex items-center w-full justify-between gap-[56px]">
+    <header className="min-[768px]:py-[29.5px] min-[1600px]:py-[38px] flex items-center w-full justify-between gap-[56px]">
       <div className="flex items-center gap-[56px]">
         <Link to="/">
           <img src={LOGO} alt="Logo" className="" />

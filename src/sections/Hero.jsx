@@ -1,6 +1,7 @@
 import { Switch } from "antd";
 import React, { useState } from "react";
 import HeroImg from "../assets/hero-img.png";
+import HeroImg768 from "../assets/hero-img-768.png";
 import Header from "../components/Header";
 import Modal from "../components/Modal/Modal";
 import ModalContent from "../components/Modal/ModalContent";
@@ -9,7 +10,7 @@ import ModalSlider from "../components/Modal/ModalSlider";
 export const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="hero-section px-[360px] relative">
+    <div className="hero-section min-[360px]:px-[2.605%] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative pb-[274.4px]">
       <Header />
       <div className="flex flex-col max-w-[780.93px] mt-1">
         <p className="text-[47.04px] leading-[114%] mb-[24.15px] tracking-[-0.6px]">
@@ -79,7 +80,7 @@ export const Hero = () => {
             </p>
           </div>
         </div>
-        <div className="relative mb-[274.4px] ml-[5px]">
+        <div className="relative ml-[5px]">
           <div className="z-20 flex items-center justify-center gap-[14.15px] bg-blue-500 w-[405.58px] h-[105.44px] rounded-[17.57px]">
             <svg
               width="54"
@@ -109,16 +110,27 @@ export const Hero = () => {
           </div>
           <div
             onClick={() => setIsOpen(true)}
-            className="ml-[10px] z-10 absolute flex items-center justify-end top-1/2 -translate-y-1/2 left-0 w-[561.96px] h-[91.52px] rounded-[17.57px] border border-[#4ABCFF]"
+            className="ml-[10px] z-10 absolute flex items-center justify-end top-1/2 -translate-y-1/2 left-0 min-[1600px]:w-[561.96px] w-[636px] h-[91.52px] rounded-[17.57px] border border-[#4ABCFF]"
           >
-            <p className="max-w-[140.28px] text-[#335873] text-[12px] font-medium pr-[7.7px] leading-[125%] tracking-[-0.3px]">
+            <p className="min-[1600px]:max-w-[140.28px] max-w-[220px] text-[#335873] text-[12px] font-medium min-[1600px]:pr-[7.7px] pr-[20px] leading-[125%] tracking-[-0.3px]">
               За 3 дня ассистент оптимизирует все ваши рекламные кампании и
               оцифрует кабинет
             </p>
           </div>
         </div>
       </div>
-      <img className="absolute top-[105px] right-25" src={HeroImg} alt="hero" />
+      <img
+        className="w-[43%] absolute top-[105px] right-25 max-[1600px]:hidden"
+        src={HeroImg}
+        alt="hero"
+      />
+      <div className="relative max-[1600px]:flex hidden">
+        <img
+          className="w-[100%] absolute -top-8 left-6"
+          src={HeroImg768}
+          alt="hero"
+        />
+      </div>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         {/* <ModalContent variant={"monitoring"} /> */}
         <ModalSlider />
