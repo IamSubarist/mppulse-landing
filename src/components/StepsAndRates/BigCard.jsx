@@ -6,8 +6,8 @@ import StepThree from "../../assets/StepThree.png";
 export const BigCard = () => {
   return (
     <div className="relative flex flex-col items-center justify-center">
-      <div className="pt-[120px] shadow-xl w-[1440px] h-[500px] rounded-[25px] bg-white flex flex-col items-center px-[44px] py-[44px] gap-[10px]">
-        <div className="text-[47.04px] tracking-[-1.3px] text-center">
+      <div className="pt-[120px] shadow-xl min-[768px]:pt-[70px] min-[1600px]:pt-[120px]  rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[64px] min-[1600px]:px-[120px] min-[768px]:py-[44px_20px] min-[1600px]:py-[44px_44px] gap-[10px]">
+        <div className="min-[768px]:text-[30px] min-[1600px]:text-[47.04px] tracking-[-1.3px] text-center">
           <p className="text-[#1D1D1D] leading-[115%] tracking-[-1px]">
             <span className="text-[#000000] font-bold leading-[115%]">
               Шаги к получению{" "}
@@ -16,18 +16,18 @@ export const BigCard = () => {
           </p>
         </div>
         <div className="flex flex-col gap-[19.5px]">
-          <p className="text-black opacity-50 text-[20px] leading-[135%] tracking-[-0.3px] text-center">
+          <p className="text-black opacity-50 min-[768px]:text-[17.39px] min-[1600px]:text-[20px] leading-[135%] tracking-[-0.3px] text-center">
             Подключение за 3 шага — результат в тот же день
           </p>
         </div>
-        <div className="z-[999] flex items-center gap-[36px] mt-[58px]">
-          <div className="flex items-center gap-[26.11px] w-[297.58px]">
+        <div className="z-[999] flex items-center min-[768px]:gap-[3px] min-[1600px]:gap-[36px] min-[768px]:mt-[6px] min-[1600px]:mt-[58px]">
+          <div className="flex min-[768px]:flex-col min-[1600px]:flex-row items-center gap-[26.11px] min-[768px]:w-[171.66px] min-[1600px]:w-[297.58px]">
             <img src={StepOne} alt="" />
             <div className="flex flex-col gap-[5.42px] text-black">
-              <p className="text-[25.06px] leading-[110%] font-bold tracking-[-0.6px]">
+              <p className="min-[768px]:text-[20px] min-[1600px]:text-[25.06px] leading-[110%] font-bold tracking-[-0.6px]">
                 Подключение
               </p>
-              <p className="text-[18.8px] leading-[135%] opacity-50 tracking-[-0.3px]">
+              <p className="max-[1600px]:max-w-[182px] min-[768px]:text-[15px] min-[1600px]:text-[18.8px] leading-[135%] opacity-50 tracking-[-0.3px]">
                 через официальные API Wildberries
               </p>
             </div>
@@ -46,13 +46,13 @@ export const BigCard = () => {
               />
             </svg>
           </div>
-          <div className="flex items-center gap-[26.11px] w-[343.57px]">
+          <div className="flex min-[768px]:flex-col min-[1600px]:flex-row items-center gap-[26.11px] min-[768px]:w-[171.66px] min-[1600px]:w-[343.57px]">
             <img src={StepTwo} alt="" />
             <div className="flex flex-col gap-[5.42px] text-black">
-              <p className="text-[25.06px] leading-[110%] font-bold tracking-[-0.6px]">
+              <p className="min-[768px]:text-[20px] min-[1600px]:text-[25.06px] leading-[110%] font-bold tracking-[-0.6px]">
                 Настройка
               </p>
-              <p className="text-[18.8px] leading-[135%] opacity-50 tracking-[-0.3px]">
+              <p className="max-[1600px]:max-w-[182px] min-[768px]:text-[15px] min-[1600px]:text-[18.8px] leading-[135%] opacity-50 tracking-[-0.3px]">
                 которая займет не более 10-20 минут времени
               </p>
             </div>
@@ -71,20 +71,20 @@ export const BigCard = () => {
               />
             </svg>
           </div>
-          <div className="flex items-center gap-[26.11px] w-[357.14px]">
+          <div className="flex min-[768px]:flex-col min-[1600px]:flex-row items-center gap-[26.11px] min-[768px]:w-[171.66px] min-[1600px]:w-[357.14px]">
             <img src={StepThree} alt="" />
             <div className="flex flex-col gap-[5.42px] text-black">
-              <p className="text-[25.06px] leading-[110%] font-bold tracking-[-0.6px]">
+              <p className="min-[768px]:text-[20px] min-[1600px]:text-[25.06px] leading-[110%] font-bold tracking-[-0.6px]">
                 Делегирование
               </p>
-              <p className="text-[18.8px] leading-[135%] opacity-50 tracking-[-0.3px]">
+              <p className="max-[1600px]:max-w-[182px] min-[768px]:text-[15px] min-[1600px]:text-[18.8px] leading-[135%] opacity-50 tracking-[-0.3px]">
                 теперь у вас есть аналитик, который за всем следит
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="shadow-xl -z-10 absolute top-0 right-1/2 translate-x-1/2 w-[1326px] h-[calc(100%+25px)] rounded-[25px] bg-white opacity-50"></div>
+      <div className="shadow-xl -z-10 absolute top-0 right-1/2 translate-x-1/2 w-[calc(100%-120px)] h-[calc(100%+25px)] rounded-[25px] bg-white opacity-50"></div>
     </div>
   );
 };

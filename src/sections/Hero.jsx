@@ -10,10 +10,10 @@ import ModalSlider from "../components/Modal/ModalSlider";
 export const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="hero-section min-[360px]:px-[2.605%] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative pb-[274.4px]">
+    <div className="hero-section min-[360px]:px-[20px] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative pb-[274.4px]">
       <Header />
       <div className="flex flex-col max-w-[780.93px] mt-1">
-        <p className="text-[47.04px] leading-[114%] mb-[24.15px] tracking-[-0.6px]">
+        <p className="text-[30.06px] min-[768px]:text-[47.04px] leading-[114%] mb-[24.15px] tracking-[-0.6px]">
           Ваш личный{" "}
           <span className="font-semibold">AI менеджер-аналитик,</span> который
           работает 24/7
@@ -35,53 +35,53 @@ export const Hero = () => {
               fill="black"
             />
           </svg>
-          <p className="text-[19.67px] leading-[135%] opacity-50 tracking-[-0.4px]">
+          <p className="text-[15px] min-[768px]:text-[19.67px] leading-[135%] opacity-50 tracking-[-0.4px]">
             Он сам анализирует карточки, рекламу и конкурентов, показывает какие{" "}
             <br />
             показатели просели и где теряется прибыль — и подсказывает, что
             делать
           </p>
         </div>
-        <div className="flex flex-wrap max-w-[651.6px] gap-[13.27px] mb-[35.28px]">
-          <div className="flex items-center pl-[17.92px] gap-[13.27px] rounded-[16.59px] w-[311.2px] h-[60.38px] border border-black">
+        <div className="flex flex-wrap max-w-[651.6px] gap-[7.76px] min-[768px]:gap-[13.27px] mb-[35.28px]">
+          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[60.38px] border border-black">
             <Switch
               checked={true}
-              className="w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-2px)]"
+              className="min-[768px]:w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-2px)]"
             />
-            <p className="text-[19.67px] font-semibold tracking-[-0.6px]">
+            <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px]">
               Оцифровка кабинета
             </p>
           </div>
-          <div className="flex items-center pl-[17.92px] gap-[13.27px] rounded-[16.59px] w-[327.12px] h-[60.38px] border border-black">
+          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[60.38px] border border-black">
             <Switch
               checked={true}
-              className="w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-2px)]"
+              className="min-[768px]:w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-2px)]"
             />
-            <p className="text-[19.67px] font-semibold tracking-[-0.6px]">
+            <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px]">
               Анализ всех конверсий
             </p>
           </div>
-          <div className="flex items-center pl-[17.92px] gap-[13.27px] rounded-[16.59px] w-[311.2px] h-[60.38px] border border-black">
+          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[60.38px] border border-black">
             <Switch
               checked={true}
-              className="w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-1px)]"
+              className="min-[768px]:w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-1px)]"
             />
-            <p className="text-[19.67px] font-semibold tracking-[-0.6px]">
+            <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px]">
               Оптимизация рекламы
             </p>
           </div>
-          <div className="flex items-center pl-[17.92px] gap-[13.27px] rounded-[16.59px] w-[327.12px] h-[60.38px] border border-black">
+          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[60.38px] border border-black">
             <Switch
               checked={true}
-              className="w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-1px)]"
+              className="min-[768px]:w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-1px)]"
             />
-            <p className="text-[19.67px] font-semibold tracking-[-0.6px]">
+            <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px]">
               Поиск причин и решений
             </p>
           </div>
         </div>
         <div className="relative ml-[5px]">
-          <div className="z-20 flex items-center justify-center gap-[14.15px] bg-blue-500 w-[405.58px] h-[105.44px] rounded-[17.57px]">
+          <div className="z-20 flex items-center justify-center gap-[14.15px] bg-blue-500 w-[320px] min-[768px]:w-[405.58px] h-[83px] min-[768px]:h-[105.44px] rounded-[17.57px]">
             <svg
               width="54"
               height="39"
@@ -100,19 +100,28 @@ export const Hero = () => {
               />
             </svg>
             <div className="flex flex-col gap-[4px] text-white leading-[105%]">
-              <p className="uppercase text-[19.67px] font-bold">
+              <p className="uppercase text-[15.53px] min-[768px]:text-[19.67px] font-bold">
                 Попробовать бесплатно
               </p>
-              <p className="text-[14.54px] opacity-60 tracking-[-0.1px]">
+              <p className="text-[11.48px] min-[768px]:text-[14.54px] opacity-60 tracking-[-0.1px]">
                 Получите 3 дня бесплатного пользования
               </p>
             </div>
           </div>
           <div
             onClick={() => setIsOpen(true)}
-            className="ml-[10px] z-10 absolute flex items-center justify-end top-1/2 -translate-y-1/2 left-0 min-[1600px]:w-[561.96px] w-[636px] h-[91.52px] rounded-[17.57px] border border-[#4ABCFF]"
+            className="hidden min-[768px]:flex ml-[10px] z-10 absolute items-center justify-end top-1/2 -translate-y-1/2 left-0 min-[1600px]:w-[561.96px] w-[636px] h-[91.52px] rounded-[17.57px] border border-[#4ABCFF]"
           >
             <p className="min-[1600px]:max-w-[140.28px] max-w-[220px] text-[#335873] text-[12px] font-medium min-[1600px]:pr-[7.7px] pr-[20px] leading-[125%] tracking-[-0.3px]">
+              За 3 дня ассистент оптимизирует все ваши рекламные кампании и
+              оцифрует кабинет
+            </p>
+          </div>
+          <div
+            onClick={() => setIsOpen(true)}
+            className="flex min-[768px]:hidden z-10 absolute items-end justify-center top-0 left-1/2 -translate-x-1/2 w-[calc(100%-38px)] h-[calc(100%+55px)] rounded-[17.57px] border border-[#4ABCFF]"
+          >
+            <p className="max-w-[247px] text-center text-[#335873] text-[12px] font-medium pb-[18px] leading-[125%] tracking-[-0.3px]">
               За 3 дня ассистент оптимизирует все ваши рекламные кампании и
               оцифрует кабинет
             </p>
@@ -126,7 +135,7 @@ export const Hero = () => {
       />
       <div className="relative max-[1600px]:flex hidden">
         <img
-          className="w-[100%] absolute -top-8 left-6"
+          className="w-[100%] absolute top-10 min-[768px]:-top-8 left-6"
           src={HeroImg768}
           alt="hero"
         />

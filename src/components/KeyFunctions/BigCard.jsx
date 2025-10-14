@@ -4,8 +4,8 @@ export const BigCard = () => {
   return (
     <div className="relative flex flex-col items-center justify-center">
       <div className="z-20 min-[768px]:pt-[70px] min-[1600px]:pt-[120px] shadow-xl h-[646px] rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[34px] min-[1600px]:px-[120px] py-[44px] min-[768px]:gap-[10px] min-[1600px]:gap-[20px]">
-        <div className="min-[768px]:text-[35px] min-[1600px]:text-[47.04px] min-[768px]:w-[500px] min-[1600px]:w-[677px] w-[677px] tracking-[-1.3px] text-center">
-          <p className="text-[#1D1D1D] leading-[115%]">
+        <div className=" text-[21px] min-[768px]:text-[35px] min-[1600px]:text-[47.04px] min-[360px]:w-[360px] min-[768px]:w-[500px] min-[1600px]:w-[677px] w-[677px] tracking-[-1.3px] text-center">
+          <p className="max-[768px]:max-w-[243px] text-[#1D1D1D] leading-[115%]">
             Сервис, который
             <span className="text-[#4A96FF] font-bold leading-[115%]">
               {" "}
@@ -17,15 +17,15 @@ export const BigCard = () => {
           </p>
         </div>
         <div className="flex flex-col gap-[19.5px]">
-          <p className="text-black opacity-50 min-[768px]:text-[17.39px] min-[1600px]:text-[20px] leading-[135%] tracking-[-0.3px] text-center">
+          <p className="text-black opacity-50 text-[15px] max-[768px]:max-w-[290px] min-[768px]:text-[17.39px] min-[1600px]:text-[20px] leading-[135%] tracking-[-0.3px] text-center">
             Для селлеров — новый сотрудник, для менеджеров — личный помощник!{" "}
             <br />
             AI-аналитик MPpulse экономит до 6 часов в день вашего времени
           </p>
         </div>
-        <div className="flex min-[768px]:flex-col min-[1600px]:flex-row min-[768px]:gap-[10px] min-[1600px]:gap-0 items-center min-[768px]:mt-[29px] min-[1600px]:mt-[16px]">
-          <div className="min-[768px]:mr-[104px] min-[1600px]:mr-0 flex gap-3 min-[1600px]:gap-0">
-            <div className="relative flex flex-col min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#4C3AFF] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[20px] min-[768px]:w-[210px] min-[1600px]:w-[241px] text-white">
+        <div className="flex min-[360px]:flex-col min-[1600px]:flex-row min-[768px]:gap-[10px] min-[1600px]:gap-0 items-center min-[768px]:mt-[29px] min-[1600px]:mt-[16px]">
+          <div className="min-[768px]:mr-[104px] min-[1600px]:mr-0 flex min-[360px]:flex-col min-[768px]:flex-row gap-3 min-[1600px]:gap-0">
+            <div className="relative flex flex-col min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#4C3AFF] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[20px] w-[154.45px] min-[768px]:w-[210px] min-[1600px]:w-[241px] text-white">
               <div className="flex items-center gap-[15px] pl-2">
                 <svg
                   width="32"
@@ -57,7 +57,7 @@ export const BigCard = () => {
               <div className="rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -left-[2px]"></div>
               <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -right-[2px]"></div>
             </div>
-            <div className="relative flex flex-col min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#49BCFF] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[20px] min-[768px]:w-[313px] min-[1600px]:w-[360px] text-white">
+            <div className="relative flex flex-col min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#49BCFF] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[20px] w-[230px] min-[768px]:w-[313px] min-[1600px]:w-[360px] text-white">
               <div className="flex items-center gap-[15px] pl-2">
                 <svg
                   width="32"
@@ -90,8 +90,8 @@ export const BigCard = () => {
               <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -right-[2px]"></div>
             </div>
           </div>
-          <div className="min-[768px]:ml-[104px] min-[1600px]:ml-0 flex gap-3 min-[1600px]:gap-0">
-            <div className="relative flex flex-col min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#4C3AFF] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[20px] min-[768px]:w-[210px] min-[1600px]:w-[241px] text-white">
+          <div className="min-[768px]:ml-[104px] min-[1600px]:ml-0 flex min-[360px]:flex-col min-[768px]:flex-row gap-3 min-[1600px]:gap-0">
+            <div className="relative flex flex-col min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#4C3AFF] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[20px] w-[154.45px] min-[768px]:w-[210px] min-[1600px]:w-[241px] text-white">
               <div className="flex items-center gap-[15px] pl-2">
                 <svg
                   width="32"
@@ -122,7 +122,7 @@ export const BigCard = () => {
               </div>
               <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -right-[2px]"></div>
             </div>
-            <div className="relative flex flex-col min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#49BCFF] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[20px] min-[768px]:w-[313px] min-[1600px]:w-[360px] text-white">
+            <div className="relative flex flex-col min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#49BCFF] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[20px] w-[230px] min-[768px]:w-[313px] min-[1600px]:w-[360px] text-white">
               <div className="flex items-center gap-[15px] pl-2">
                 <svg
                   width="32"
