@@ -81,7 +81,7 @@ export const Hero = () => {
           </div>
         </div>
         <div className="relative ml-[5px]">
-          <div className="z-20 flex items-center justify-center gap-[14.15px] bg-blue-500 w-[320px] min-[768px]:w-[405.58px] h-[83px] min-[768px]:h-[105.44px] rounded-[17.57px]">
+          <div className="z-20 flex items-center justify-center gap-[14.15px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] w-[320px] min-[768px]:w-[405.58px] h-[83px] min-[768px]:h-[105.44px] rounded-[17.57px]">
             <svg
               width="54"
               height="39"

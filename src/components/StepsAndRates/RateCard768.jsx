@@ -4,7 +4,7 @@ export const RateCard768 = ({ title, description, data, price, discount }) => {
   return (
     <div className="relative flex flex-col items-center justify-center">
       {discount && (
-        <div className="z-[3] rounded-[5.57px] absolute -top-3 left-[39px] w-[207px] h-[25px] bg-[#4C3AFF] flex items-center justify-center">
+        <div className="z-[3] rounded-[5.57px] absolute -top-3 left-[39px] w-[207px] h-[25px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] flex items-center justify-center">
           <p className="text-[13.29px] font-bold leading-[105%] text-white tracking-[-0.3px] uppercase">
             для маленьких кабинетов
           </p>

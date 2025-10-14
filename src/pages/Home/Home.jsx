@@ -9,8 +9,8 @@ export const Home = () => {
     <div>
       <Hero />
       <KeyFunctions />
-      {/* <StepsAndRates /> */}
-      {/* <Questions /> */}
+      <StepsAndRates />
+      <Questions />
     </div>
   );
 };

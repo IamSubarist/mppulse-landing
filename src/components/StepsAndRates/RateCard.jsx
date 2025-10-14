@@ -4,7 +4,7 @@ export const RateCard = ({ title, description, data, price, discount }) => {
   return (
     <div className="relative flex flex-col items-center justify-center">
       {discount && (
-        <div className="z-[3] rounded-[5.57px] absolute -top-3 left-[39px] min-[768px]:w-[185.51px] min-[1600px]:w-[207px] min-[768px]:h-[22.41px] min-[1600px]:h-[25px] bg-[#4C3AFF] flex items-center justify-center">
+        <div className="z-[3] rounded-[5.57px] absolute -top-3 left-[39px] min-[768px]:w-[185.51px] min-[1600px]:w-[207px] min-[768px]:h-[22.41px] min-[1600px]:h-[25px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] flex items-center justify-center">
           <p className="min-[768px]:text-[11.91px] min-[1600px]:text-[13.29px] font-bold leading-[105%] text-white tracking-[-0.3px] uppercase">
             для маленьких кабинетов
           </p>
@@ -63,11 +63,11 @@ export const RateCard = ({ title, description, data, price, discount }) => {
           ))}
         </div>
         <div className="flex flex-col items-center justify-center mt-[22px] gap-[18px]">
-          <p className="text-[#4C3AFF] min-[768px]:text-[28.68px] min-[1600px]:text-[32px] font-bold leading-[110%] tracking-[0.3px] text-center">
+          <p className="bg-gradient-to-r from-[#4C3AFF] to-[#49BCFF] bg-clip-text text-transparent min-[768px]:text-[28.68px] min-[1600px]:text-[32px] font-bold leading-[110%] tracking-[0.3px] text-center">
             {price} руб/мес
           </p>
           <div>
-            <button className="min-[768px]:w-[261.69px] min-[1600px]:w-[292px] min-[768px]:h-[68.03px] min-[1600px]:h-[75.91px] rounded-[12.65px] bg-[#4C3AFF] flex items-center justify-center gap-2">
+            <button className="min-[768px]:w-[261.69px] min-[1600px]:w-[292px] min-[768px]:h-[68.03px] min-[1600px]:h-[75.91px] rounded-[12.65px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] flex items-center justify-center gap-2">
               <p className="min-[768px]:text-[16.13px] min-[1600px]:text-[18px] font-bold text-white leading-[105%] uppercase">
                 Подключить
               </p>
