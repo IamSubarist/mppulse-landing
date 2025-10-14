@@ -43,7 +43,7 @@ export const Hero = () => {
           </p>
         </div>
         <div className="flex flex-wrap max-w-[651.6px] gap-[7.76px] min-[768px]:gap-[13.27px] mb-[35.28px]">
-          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[60.38px] border border-black">
+          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[60.38px]">
             <Switch
               checked={true}
               className="min-[768px]:w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-2px)]"
@@ -52,7 +52,7 @@ export const Hero = () => {
               Оцифровка кабинета
             </p>
           </div>
-          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[60.38px] border border-black">
+          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[60.38px]">
             <Switch
               checked={true}
               className="min-[768px]:w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-2px)]"
@@ -61,7 +61,7 @@ export const Hero = () => {
               Анализ всех конверсий
             </p>
           </div>
-          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[60.38px] border border-black">
+          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[60.38px]">
             <Switch
               checked={true}
               className="min-[768px]:w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-1px)]"
@@ -70,7 +70,7 @@ export const Hero = () => {
               Оптимизация рекламы
             </p>
           </div>
-          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[60.38px] border border-black">
+          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[60.38px]">
             <Switch
               checked={true}
               className="min-[768px]:w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-1px)]"
@@ -81,7 +81,7 @@ export const Hero = () => {
           </div>
         </div>
         <div className="relative ml-[5px]">
-          <div className="z-20 flex items-center justify-center gap-[14.15px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] w-[320px] min-[768px]:w-[405.58px] h-[83px] min-[768px]:h-[105.44px] rounded-[17.57px]">
+          <div className="relative z-20 flex items-center justify-center gap-[14.15px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] w-[320px] min-[768px]:w-[405.58px] h-[83px] min-[768px]:h-[105.44px] rounded-[17.57px]">
             <svg
               width="54"
               height="39"
@@ -129,13 +129,13 @@ export const Hero = () => {
         </div>
       </div>
       <img
-        className="w-[43%] absolute top-[105px] right-25 max-[1600px]:hidden"
+        className="z-[30] w-[43%] absolute top-[105px] right-25 max-[1600px]:hidden"
         src={HeroImg}
         alt="hero"
       />
       <div className="relative max-[1600px]:flex hidden">
         <img
-          className="w-[100%] absolute top-10 min-[768px]:-top-8 left-6"
+          className="z-[30] w-[100%] absolute top-10 min-[768px]:-top-8 left-5"
           src={HeroImg768}
           alt="hero"
         />

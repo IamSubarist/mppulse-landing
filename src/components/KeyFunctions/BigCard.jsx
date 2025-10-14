@@ -1,11 +1,12 @@
 import React from "react";
+import { BigCardItemsCardMobile } from "./BigCardItemsCArdMobile";
 
 export const BigCard = () => {
   return (
     <div className="relative flex flex-col items-center justify-center">
-      <div className="z-20 min-[768px]:pt-[70px] min-[1600px]:pt-[120px] shadow-xl h-[646px] rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[34px] min-[1600px]:px-[120px] py-[44px] min-[768px]:gap-[10px] min-[1600px]:gap-[20px]">
-        <div className=" text-[21px] min-[768px]:text-[35px] min-[1600px]:text-[47.04px] min-[360px]:w-[360px] min-[768px]:w-[500px] min-[1600px]:w-[677px] w-[677px] tracking-[-1.3px] text-center">
-          <p className="max-[768px]:max-w-[243px] text-[#1D1D1D] leading-[115%]">
+      <div className="z-20 min-[768px]:pt-[70px] min-[1600px]:pt-[120px] shadow-xl min-[768px]:h-[646px] min-[768px]:rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[34px] min-[1600px]:px-[120px] py-[44px] gap-2 min-[768px]:gap-[10px] min-[1600px]:gap-[20px]">
+        <div className="text-[21px] min-[768px]:text-[35px] min-[1600px]:text-[47.04px] min-[360px]:w-[360px] min-[768px]:w-[500px] min-[1600px]:w-[677px] w-[677px] tracking-[-1.3px] text-center">
+          <p className="text-[#1D1D1D] leading-[115%]">
             Сервис, который
             <span className="text-[#4A96FF] font-bold leading-[115%]">
               {" "}
@@ -23,7 +24,7 @@ export const BigCard = () => {
             AI-аналитик MPpulse экономит до 6 часов в день вашего времени
           </p>
         </div>
-        <div className="flex min-[360px]:flex-col min-[1600px]:flex-row min-[768px]:gap-[10px] min-[1600px]:gap-0 items-center min-[768px]:mt-[29px] min-[1600px]:mt-[16px]">
+        <div className="hidden min-[768px]:flex min-[360px]:flex-col min-[1600px]:flex-row min-[768px]:gap-[10px] min-[1600px]:gap-0 items-center min-[768px]:mt-[29px] min-[1600px]:mt-[16px]">
           <div className="min-[768px]:mr-[104px] min-[1600px]:mr-0 flex min-[360px]:flex-col min-[768px]:flex-row gap-3 min-[1600px]:gap-0">
             <div
               style={{
@@ -179,8 +180,9 @@ export const BigCard = () => {
             </div>
           </div>
         </div>
+        <BigCardItemsCardMobile />
       </div>
-      <div className="shadow-xl z-10 absolute top-0 right-1/2 translate-x-1/2 w-[calc(100%-120px)] h-[calc(100%+25px)] rounded-[25px] bg-white opacity-50"></div>
+      <div className="max-[768px]:hidden shadow-xl z-10 absolute top-0 right-1/2 translate-x-1/2 w-[calc(100%-120px)] h-[calc(100%+25px)] rounded-[25px] bg-white opacity-50"></div>
     </div>
   );
 };

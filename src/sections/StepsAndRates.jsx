@@ -12,16 +12,16 @@ export const StepsAndRates = () => {
   };
 
   return (
-    <div className="bg-blue-600 steps-and-rates-section px-[360px] relative h-[1349px]">
-      <div className="absolute -top-[148px] left-1/2 -translate-x-1/2">
+    <div className="bg-blue-600 steps-and-rates-section min-[360px]:px-[20px] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative h-[1940px] min-[768px]:h-[1430px]">
+      <div className="max-[768px]:w-full absolute -top-[148px] left-1/2 -translate-x-1/2">
         <BigCard />
       </div>
-      <div className="min-[768px]:pt-[324px] min-[1600px]:pt-[470px] flex flex-col items-center justify-center">
-        <p className="text-[47.04px] font-bold leading-[115%] tracking-[-1.5px] min-[768px]:mb-[26px] min-[1600px]:mb-[38px] text-center text-white">
+      <div className="pt-[360px] min-[768px]:pt-[324px] min-[1600px]:pt-[470px] flex flex-col items-center justify-center">
+        <p className="text-[32px] min-[768px]:text-[47.04px] font-bold leading-[115%] tracking-[-1.5px] mb-[24px] min-[768px]:mb-[26px] min-[1600px]:mb-[38px] text-center text-white">
           Тарифы
         </p>
         <PeriodToggle onPeriodChange={handlePeriodChange} />
-        <div className="hidden min-[1600px]:flex min-[768px]:flex-col min-[1600px]:flex-row items-center justify-center gap-[30px]">
+        <div className="flex min-[768px]:hidden min-[1600px]:flex min-[360px]:flex-col min-[1600px]:flex-row items-center justify-center gap-[30px]">
           <RateCard
             discount
             title="Тариф «Поддержка»"
@@ -81,7 +81,7 @@ export const StepsAndRates = () => {
             price={2999}
           />
         </div>
-        <div className="flex min-[1600px]:hidden min-[768px]:flex-col min-[1600px]:flex-row items-center justify-center gap-[38px]">
+        <div className="hidden min-[768px]:flex min-[1600px]:hidden min-[768px]:flex-col min-[1600px]:flex-row items-center justify-center gap-[38px]">
           <div className="flex gap-[26.89px]">
             <RateCard
               discount

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { QuestionCard } from "../components/Questions/QuestionCard";
-import BACK from "../assets/backCircle.svg"
+import BACK from "../assets/backCircle.svg";
 
 export const Questions = () => {
   const [openQuestion, setOpenQuestion] = useState(0);
@@ -48,7 +48,7 @@ export const Questions = () => {
         className="absolute min-[1600px]:bottom-[125px] min-[768px]:bottom-[50px] bottom-[207px] left-1/2 -translate-x-1/2 w-full min-[1600px]:h-[1500px] min-[768px]:h-[1228px] h-[687px] bg-cover bg-no-repeat bg-center z-0 pointer-events-none"
         style={{ backgroundImage: `url(${BACK})` }}
       />
-      <div className="pt-[138px] flex flex-col items-center justify-center">
+      <div className="pt-[40px] min-[768px]:pt-[138px] flex flex-col items-center justify-center">
         <p className="min-[1600px]:text-[47.04px] min-[768px]:text-[30px] text-[24px] font-bold leading-[115%] min-[1600px]:tracking-[-1.5px] tracking-[-0.9px] min-[1600px]:mb-[56px] min-[768px]:mb-[39px] mb-[20px] text-center z-10">
           <span className="text-[#4C51FF]">Ответы</span> на часто{" "}
           <br className="md:hidden" /> задаваемые вопросы

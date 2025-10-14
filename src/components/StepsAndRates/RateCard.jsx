@@ -10,16 +10,16 @@ export const RateCard = ({ title, description, data, price, discount }) => {
           </p>
         </div>
       )}
-      <div className="z-[2] shadow-xl min-[768px]:w-[340px] min-[1600px]:w-[380px] rounded-[25px] bg-white flex flex-col min-[768px]:px-[34px] min-[1600px]:px-[39px] py-[39px_44px] min-[768px]:gap-[24px] min-[1600px]:gap-[32px]">
+      <div className="z-[2] shadow-xl min-[768px]:w-[340px] min-[1600px]:w-[380px] rounded-[25px] bg-white flex flex-col px-[32.74px] min-[768px]:px-[34px] min-[1600px]:px-[39px] py-[39px_44px] gap-4 min-[768px]:gap-[24px] min-[1600px]:gap-[32px]">
         <div className="flex flex-col gap-[13px]">
-          <p className="text-[#1D1D1D] min-[768px]:text-[21.51px] min-[1600px]:text-[24px] font-bold leading-[110%] tracking-[-0.6px]">
+          <p className="text-[#1D1D1D] min-[768px]:text-[21.51px] text-[20.15px] min-[1600px]:text-[24px] font-bold leading-[110%] tracking-[-0.6px]">
             {title}
           </p>
-          <p className="text-black opacity-50 min-[768px]:text-[13.44px] min-[1600px]:text-[15px] leading-[135%] tracking-[-0.3px]">
+          <p className="text-black opacity-50 text-[12.59px] min-[768px]:text-[13.44px] min-[1600px]:text-[15px] leading-[135%] tracking-[-0.3px]">
             {description}
           </p>
         </div>
-        <div className="flex flex-col min-[768px]:gap-[17px] min-[1600px]:gap-[19.5px]">
+        <div className="flex flex-col gap-3 min-[768px]:gap-[17px] min-[1600px]:gap-[19.5px]">
           {data.map((item, index) => (
             <div key={index} className="flex items-center gap-3">
               <div className="size-[28px] rounded-[5px] bg-[#E9F4FD] flex items-center justify-center">
@@ -52,10 +52,10 @@ export const RateCard = ({ title, description, data, price, discount }) => {
                 </svg>
               </div>
               <div>
-                <p className="min-[768px]:text-[12.55px] min-[1600px]:text-[14px] font-bold leading-[135%] tracking-[-0.5px] text-[#1D1D1D]">
+                <p className="text-[11.75px] min-[768px]:text-[12.55px] min-[1600px]:text-[14px] font-bold leading-[135%] tracking-[-0.5px] text-[#1D1D1D]">
                   {item.title}
                 </p>
-                <p className="min-[768px]:text-[12.55px] min-[1600px]:text-[14px] leading-[135%] tracking-[-0.5px] text-[#1D1D1D]">
+                <p className="text-[11.75px] min-[768px]:text-[12.55px] min-[1600px]:text-[14px] leading-[135%] tracking-[-0.5px] text-[#1D1D1D]">
                   {item.description}
                 </p>
               </div>
@@ -63,11 +63,11 @@ export const RateCard = ({ title, description, data, price, discount }) => {
           ))}
         </div>
         <div className="flex flex-col items-center justify-center mt-[22px] gap-[18px]">
-          <p className="bg-gradient-to-r from-[#4C3AFF] to-[#49BCFF] bg-clip-text text-transparent min-[768px]:text-[28.68px] min-[1600px]:text-[32px] font-bold leading-[110%] tracking-[0.3px] text-center">
+          <p className="bg-gradient-to-r from-[#4C3AFF] to-[#49BCFF] bg-clip-text text-transparent text-[26.86px] min-[768px]:text-[28.68px] min-[1600px]:text-[32px] font-bold leading-[110%] tracking-[0.3px] text-center">
             {price} руб/мес
           </p>
           <div>
-            <button className="min-[768px]:w-[261.69px] min-[1600px]:w-[292px] min-[768px]:h-[68.03px] min-[1600px]:h-[75.91px] rounded-[12.65px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] flex items-center justify-center gap-2">
+            <button className="w-[245px] min-[768px]:w-[261.69px] min-[1600px]:w-[292px] h-[63.72px] min-[768px]:h-[68.03px] min-[1600px]:h-[75.91px] rounded-[12.65px] bg-[#4C3AFF] flex items-center justify-center gap-2">
               <p className="min-[768px]:text-[16.13px] min-[1600px]:text-[18px] font-bold text-white leading-[105%] uppercase">
                 Подключить
               </p>
