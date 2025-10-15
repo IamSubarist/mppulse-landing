@@ -95,3 +95,12 @@ body {
     height: 12.08px !important;
   }
 }
+@media (max-width: 767px) {
+  .ant-drawer-content-wrapper {
+    left: 0 !important;
+  }
+
+  .ant-drawer-content {
+    width: 101% !important;
+  }
+}
