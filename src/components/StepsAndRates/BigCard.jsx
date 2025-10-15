@@ -8,7 +8,7 @@ export const BigCard = () => {
     <div className="relative flex flex-col items-center justify-center">
       <div className="shadow-xl min-[768px]:pt-[62px] min-[1600px]:pt-[120px] min-[768px]:rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[40px] min-[1600px]:px-[120px] py-[44px_44px] min-[768px]:py-[44px_42px] min-[1600px]:py-[44px_118px] gap-[10px] min-[768px]:gap-[8px] min-[1600px]:gap-[10px]">
         <div className="text-[24px] min-[768px]:text-[30px] min-[1600px]:text-[47.04px] tracking-[-1.3px] text-center">
-          <p className="text-[#1D1D1D] leading-[115%] tracking-[-1px]">
+          <p className="text-[#1D1D1D] leading-[115%] tracking-[-1px] max-[768px]:px-10 max-[768px]:pt-[6px]">
             <span className="text-[#000000] font-bold leading-[115%]">
               Шаги к получению{" "}
             </span>
@@ -16,7 +16,7 @@ export const BigCard = () => {
           </p>
         </div>
         <div className="flex flex-col gap-[19.5px]">
-          <p className="text-black opacity-50 text-[15px] min-[768px]:text-[17.39px] min-[1600px]:text-[20px] leading-[135%] tracking-[-0.3px] text-center">
+          <p className="max-[768px]:px-20 text-black opacity-50 text-[15px] min-[768px]:text-[17.39px] min-[1600px]:text-[20px] leading-[135%] tracking-[-0.3px] text-center">
             Подключение за 3 шага — результат в тот же день
           </p>
         </div>
@@ -85,7 +85,7 @@ export const BigCard = () => {
             </div>
           </div>
         </div>
-        <div className="z-[999] max-[1600px]:flex hidden max-[768px]:flex-col items-center min-[768px]:items-start min-[1600px]:items-center gap-[10px] min-[768px]:gap-[21px] min-[1600px]:gap-[36px] min-[768px]:mt-[20px] min-[1600px]:mt-[58px]">
+        <div className="z-[999] max-[1600px]:flex hidden max-[768px]:flex-col items-center min-[768px]:items-start min-[1600px]:items-center gap-[10px] min-[768px]:gap-[21px] min-[1600px]:gap-[36px] max-[768px]:pl-6 mt-[20px] min-[768px]:mt-[20px] min-[1600px]:mt-[58px]">
           <div className="flex min-[768px]:flex-col min-[1600px]:flex-row items-center gap-[26.11px] min-[768px]:w-[134px] min-[1600px]:w-[297.58px]">
             <img
               className="max-[768px]:size-[80px] max-[1600px]:size-[96.85px]"
@@ -93,10 +93,10 @@ export const BigCard = () => {
               alt=""
             />
             <div className="flex flex-col gap-[5.42px] text-black min-[768px]:text-center min-[1600px]:text-left">
-              <p className="min-[768px]:text-[20px] min-[1600px]:text-[25.06px] leading-[110%] font-bold tracking-[-0.6px]">
+              <p className="text-[19.16px] min-[768px]:text-[20px] min-[1600px]:text-[25.06px] leading-[110%] font-bold tracking-[-0.6px]">
                 Подключение
               </p>
-              <p className="max-[1600px]:max-w-[182px] min-[768px]:text-[15px] min-[1600px]:text-[18.8px] leading-[135%] opacity-50 tracking-[-0.3px]">
+              <p className="max-[1600px]:max-w-[182px] text-[14.3px] min-[768px]:text-[15px] min-[1600px]:text-[18.8px] leading-[135%] opacity-50 tracking-[-0.3px]">
                 через официальные API Wildberries
               </p>
             </div>
@@ -123,10 +123,10 @@ export const BigCard = () => {
               alt=""
             />
             <div className="flex flex-col gap-[5.42px] text-black min-[768px]:text-center min-[1600px]:text-left">
-              <p className="min-[768px]:text-[20px] min-[1600px]:text-[25.06px] leading-[110%] font-bold tracking-[-0.6px]">
+              <p className="text-[19.16px] min-[768px]:text-[20px] min-[1600px]:text-[25.06px] leading-[110%] font-bold tracking-[-0.6px]">
                 Настройка
               </p>
-              <p className="max-[1600px]:max-w-[182px] min-[768px]:text-[15px] min-[1600px]:text-[18.8px] leading-[135%] opacity-50 tracking-[-0.3px]">
+              <p className="max-[1600px]:max-w-[182px] text-[14.3px] min-[768px]:text-[15px] min-[1600px]:text-[18.8px] leading-[135%] opacity-50 tracking-[-0.3px]">
                 которая займет не более 10-20 минут времени
               </p>
             </div>
@@ -153,10 +153,10 @@ export const BigCard = () => {
               alt=""
             />
             <div className="flex flex-col gap-[5.42px] text-black min-[768px]:text-center min-[1600px]:text-left">
-              <p className="min-[768px]:text-[20px] min-[1600px]:text-[25.06px] leading-[110%] font-bold tracking-[-0.6px]">
+              <p className="text-[19.16px] min-[768px]:text-[20px] min-[1600px]:text-[25.06px] leading-[110%] font-bold tracking-[-0.6px]">
                 Делегирование
               </p>
-              <p className="max-[1600px]:max-w-[182px] min-[768px]:text-[15px] min-[1600px]:text-[18.8px] leading-[135%] opacity-50 tracking-[-0.3px]">
+              <p className="max-[1600px]:max-w-[182px] text-[14.3px] min-[768px]:text-[15px] min-[1600px]:text-[18.8px] leading-[135%] opacity-50 tracking-[-0.3px]">
                 теперь у вас есть аналитик, который за всем следит
               </p>
             </div>

@@ -2,8 +2,8 @@ import React from "react";
 
 export const BigCardItemsCardMobile = () => {
   return (
-    <div className="hidden max-[768px]:flex min-[360px]:flex-col min-[1600px]:flex-row gap-2 min-[768px]:gap-[10px] min-[1600px]:gap-0 items-center mt-[29px] min-[768px]:mt-[29px] min-[1600px]:mt-[16px]">
-      <div className="relative flex flex-col gap-[6px] min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#49BCFF] p-[16.86px] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[12.89px] w-[230px] min-[768px]:w-[313px] min-[1600px]:w-[360px] text-white">
+    <div className="hidden max-[768px]:flex min-[360px]:flex-col min-[1600px]:flex-row gap-2 min-[768px]:gap-[10px] min-[1600px]:gap-0 items-center mt-[19px] min-[768px]:mt-[29px] min-[1600px]:mt-[16px]">
+      <div className="mr-[26px] relative flex flex-col gap-[6px] min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#49BCFF] p-[16.86px] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[12.89px] w-[230px] min-[768px]:w-[313px] min-[1600px]:w-[360px] text-white">
         <div className="flex items-center gap-[5.66px] pl-2">
           <svg
             width="21"
@@ -32,6 +32,7 @@ export const BigCardItemsCardMobile = () => {
             на анализе всех показателей карточек товаров и анализ конкурентов
           </p>
         </div>
+        <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -left-[2px]"></div>
         <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -right-[2px]"></div>
       </div>
       <div className="min-[768px]:mr-[104px] min-[1600px]:mr-0 flex gap-2 min-[1600px]:gap-0">
@@ -96,10 +97,11 @@ export const BigCardItemsCardMobile = () => {
               на выявление причин падения показателей
             </p>
           </div>
+          <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -left-[2px]"></div>
           <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -right-[2px]"></div>
         </div>
       </div>
-      <div className="relative flex flex-col gap-[6px] min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#49BCFF] p-[16.86px] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[12.89px] w-[230px] min-[768px]:w-[313px] min-[1600px]:w-[360px] text-white">
+      <div className="ml-[44px] relative flex flex-col gap-[6px] min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#49BCFF] p-[16.86px] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[12.89px] w-[230px] min-[768px]:w-[313px] min-[1600px]:w-[360px] text-white">
         <div className="flex items-center gap-[5.66px] pl-2">
           <svg
             width="21"
@@ -128,6 +130,7 @@ export const BigCardItemsCardMobile = () => {
             на анализе всех ключей в рекламе и выборе стратегии по ним
           </p>
         </div>
+        <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -left-[2px]"></div>
         <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -right-[2px]"></div>
       </div>
     </div>

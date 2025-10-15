@@ -5,12 +5,12 @@ import { BigCard } from "../components/KeyFunctions/BigCard";
 
 export const KeyFunctions = () => {
   return (
-    <div className="keyfunc-section min-[360px]:px-[2.605%] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative h-[2400px] min-[768px]:h-[2192px] min-[1600px]:h-[1870px]">
-      <div className="absolute min-[1600px]:-top-[161px] min-[768px]:top-[264px] left-1/2 -translate-x-1/2">
+    <div className="keyfunc-section min-[360px]:px-[2.605%] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative h-[2618px] min-[768px]:h-[2192px] min-[1600px]:h-[1870px]">
+      <div className="absolute top-[80px] min-[1600px]:-top-[161px] min-[768px]:top-[264px] left-1/2 -translate-x-1/2">
         <BigCard />
       </div>
-      <div className="pt-[600px] min-[768px]:pt-[970px] min-[1600px]:pt-[624px]">
-        <p className="text-[24px] min-[768px]:text-[35px] min-[1600px]:text-[47.04px] font-bold leading-[115%] tracking-[-1.5px] mb-[30px] min-[768px]:mb-[76px] min-[1600px]:mb-[92px] text-center">
+      <div className="pt-[724px] min-[768px]:pt-[970px] min-[1600px]:pt-[624px]">
+        <p className="text-[24px] min-[768px]:text-[35px] min-[1600px]:text-[47.04px] font-bold leading-[115%] tracking-[-0.6px] min-[768px]:tracking-[-1.5px] mb-[55px] min-[768px]:mb-[76px] min-[1600px]:mb-[92px] text-center">
           Три <span className="text-[#4C51FF]">ключевые</span> функции
         </p>
         <div className="min-[360px]:flex min-[768px]:hidden min-[1600px]:flex min-[1600px]:flex-row flex-col items-center min-[768px]:items-start justify-center gap-[57px] min-[768px]:gap-[30px]">

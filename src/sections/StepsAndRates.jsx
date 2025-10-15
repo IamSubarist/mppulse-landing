@@ -12,16 +12,16 @@ export const StepsAndRates = () => {
   };
 
   return (
-    <div className="bg-blue-600 steps-and-rates-section min-[360px]:px-[20px] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative h-[1940px] min-[768px]:h-[1396px] min-[1600px]:h-[1370px]">
+    <div className="bg-blue-600 steps-and-rates-section min-[360px]:px-[20px] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative h-[1986px] min-[768px]:h-[1396px] min-[1600px]:h-[1370px]">
       <div className="max-[768px]:w-full absolute -top-[128px] min-[768px]:-top-[122px] min-[1600px]:-top-[128px] left-1/2 -translate-x-1/2">
         <BigCard />
       </div>
-      <div className="pt-[360px] min-[768px]:pt-[342px] min-[1600px]:pt-[490px] flex flex-col items-center justify-center">
-        <p className="text-[32px] min-[768px]:text-[47.04px] font-bold leading-[115%] tracking-[-1.5px] mb-[24px] min-[768px]:mb-[26px] min-[1600px]:mb-[38px] text-center text-white">
+      <div className="pt-[424px] min-[768px]:pt-[342px] min-[1600px]:pt-[490px] flex flex-col items-center justify-center">
+        <p className="text-[28px] min-[768px]:text-[47.04px] font-bold leading-[115%] tracking-[-1.5px] mb-[17px] min-[768px]:mb-[26px] min-[1600px]:mb-[38px] text-center text-white">
           Тарифы
         </p>
         <PeriodToggle onPeriodChange={handlePeriodChange} />
-        <div className="flex min-[768px]:hidden min-[1600px]:flex min-[360px]:flex-col min-[1600px]:flex-row items-center justify-center gap-[30px]">
+        <div className="flex min-[768px]:hidden min-[1600px]:flex min-[360px]:flex-col min-[1600px]:flex-row items-center justify-center gap-[28px] min-[768px]:gap-[30px]">
           <RateCard
             discount
             title="Тариф «Поддержка»"
