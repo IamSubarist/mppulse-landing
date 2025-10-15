@@ -4,7 +4,7 @@ import { BigCardItemsCardMobile } from "./BigCardItemsCardMobile";
 export const BigCard = () => {
   return (
     <div className="relative flex flex-col items-center justify-center">
-      <div className="z-20 min-[768px]:pt-[70px] min-[1600px]:pt-[120px] shadow-xl min-[768px]:h-[646px] min-[768px]:rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[34px] min-[1600px]:px-[120px] py-[44px] gap-2 min-[768px]:gap-[10px] min-[1600px]:gap-[20px]">
+      <div className="z-20 min-[768px]:pt-[70px] min-[1600px]:pt-[120px] shadow-xl min-[768px]:h-[605px] min-[768px]:rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[34px] min-[1600px]:px-[120px] py-[44px] gap-2 min-[768px]:gap-[10px] min-[1600px]:gap-[20px]">
         <div className="text-[21px] min-[768px]:text-[35px] min-[1600px]:text-[47.04px] min-[360px]:w-[360px] min-[768px]:w-[500px] min-[1600px]:w-[677px] w-[677px] tracking-[-1.3px] text-center">
           <p className="text-[#1D1D1D] leading-[115%]">
             Сервис, который
@@ -100,6 +100,7 @@ export const BigCard = () => {
                   конкурентов
                 </p>
               </div>
+              <div className="min-[1600px]:hidden z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -left-[2px]"></div>
               <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -right-[2px]"></div>
             </div>
           </div>
@@ -139,6 +140,7 @@ export const BigCard = () => {
                   на выявление причин падения показателей
                 </p>
               </div>
+              <div className="min-[1600px]:hidden z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -left-[2px]"></div>
               <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -right-[2px]"></div>
             </div>
             <div
@@ -176,6 +178,7 @@ export const BigCard = () => {
                   на анализе всех ключей в рекламе и выборе стратегии по ним
                 </p>
               </div>
+              <div className="min-[1600px]:hidden z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -left-[2px]"></div>
               <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -right-[2px]"></div>
             </div>
           </div>

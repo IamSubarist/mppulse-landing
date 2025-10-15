@@ -37,3 +37,61 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* Базовый стиль свитча */
+.ant-switch {
+  min-width: 47.11px !important;
+  height: 25.21px !important;
+}
+
+/* Активное состояние */
+.ant-switch.ant-switch-checked {
+  background-color: #54c24e !important;
+}
+
+/* Позиция "ручки" при включении */
+.ant-switch.ant-switch-checked .ant-switch-handle {
+  left: calc(100% - 20px - 2px) !important;
+  top: calc(100% - 20px - 2px) !important;
+}
+
+.ant-switch-handle {
+  width: 15.92px !important;
+  height: 15.92px !important;
+}
+
+/* ===== Адаптив под 768px ===== */
+@media (min-width: 768px) and (max-width: 1600px) {
+  .ant-switch {
+    min-width: 47.11px !important;
+    height: 25.21px !important;
+  }
+
+  .ant-switch.ant-switch-checked .ant-switch-handle {
+    left: calc(100% - 18px - 2px) !important;
+    top: calc(100% - 18px - 2px) !important;
+  }
+
+  .ant-switch-handle {
+    width: 15.92px !important;
+    height: 15.92px !important;
+  }
+}
+
+/* ===== Адаптив под 360px ===== */
+@media (min-width: 360px) and (max-width: 767px) {
+  .ant-switch {
+    min-width: 35.75px !important;
+    height: 19.13px !important;
+  }
+
+  .ant-switch.ant-switch-checked .ant-switch-handle {
+    left: calc(100% - 13px - 2px) !important;
+    top: calc(100% - 14px - 2px) !important;
+  }
+
+  .ant-switch-handle {
+    width: 12.08px !important;
+    height: 12.08px !important;
+  }
+}

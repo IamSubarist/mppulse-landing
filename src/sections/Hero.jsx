@@ -2,6 +2,7 @@ import { Switch } from "antd";
 import React, { useState } from "react";
 import HeroImg from "../assets/hero-img.png";
 import HeroImg768 from "../assets/hero-img-768.png";
+import HeroImg360 from "../assets/hero-img-360.png";
 import Header from "../components/Header";
 import Modal from "../components/Modal/Modal";
 import ModalContent from "../components/Modal/ModalContent";
@@ -13,19 +14,19 @@ export const Hero = () => {
     <div className="hero-section min-[360px]:px-[20px] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative pb-[274.4px]">
       <Header />
       <div className="flex flex-col max-w-[780.93px] mt-1">
-        <p className="text-[30.06px] min-[768px]:text-[47.04px] leading-[114%] mb-[24.15px] tracking-[-0.6px]">
+        <p className="text-[30.06px] min-[768px]:text-[47.04px] leading-[114%] mb-[15px] min-[768px]:mb-[24.15px] tracking-[-0.6px]">
           Ваш личный{" "}
           <span className="font-semibold">AI менеджер-аналитик,</span> который
           работает 24/7
         </p>
-        <div className="flex items-start gap-[17.57px] mb-[32.71px]">
+        <div className="flex items-start gap-[10px] min-[768px]:gap-[17.57px] mb-[18px] min-[768px]:mb-[32.71px]">
           <svg
             width="15"
             height="15"
             viewBox="0 0 15 15"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="size-[15px] mt-[5px]"
+            className="size-[12px] min-[768px]:size-[15px] mt-[5px]"
           >
             <path
               opacity="0.2"
@@ -35,52 +36,40 @@ export const Hero = () => {
               fill="black"
             />
           </svg>
-          <p className="text-[15px] min-[768px]:text-[19.67px] leading-[135%] opacity-50 tracking-[-0.4px]">
+          <p className="max-[768px]:w-[254px] text-[15px] min-[768px]:text-[19.67px] leading-[135%] opacity-50 tracking-[-0.4px]">
             Он сам анализирует карточки, рекламу и конкурентов, показывает какие{" "}
-            <br />
+            <br className="max-[768px]:hidden" />
             показатели просели и где теряется прибыль — и подсказывает, что
             делать
           </p>
         </div>
-        <div className="flex flex-wrap max-w-[651.6px] gap-[7.76px] min-[768px]:gap-[13.27px] mb-[35.28px]">
-          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[60.38px]">
-            <Switch
-              checked={true}
-              className="min-[768px]:w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-2px)]"
-            />
-            <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px]">
+        <div className="flex flex-wrap max-w-[651.6px] gap-[7px] min-[768px]:gap-[13.27px] mb-[21px] min-[768px]:mb-[35.28px]">
+          <div className="bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[55.27px] min-[768px]:h-[60.38px]">
+            <Switch checked={true} />
+            <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px] max-[768px]:leading-[110%]">
               Оцифровка кабинета
             </p>
           </div>
-          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[60.38px]">
-            <Switch
-              checked={true}
-              className="min-[768px]:w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-2px)]"
-            />
-            <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px]">
+          <div className="bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[55.27px] min-[768px]:h-[60.38px]">
+            <Switch checked={true} />
+            <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px] max-[768px]:leading-[110%]">
               Анализ всех конверсий
             </p>
           </div>
-          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[60.38px]">
-            <Switch
-              checked={true}
-              className="min-[768px]:w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-1px)]"
-            />
-            <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px]">
+          <div className="bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[55.27px] min-[768px]:h-[60.38px]">
+            <Switch checked={true} />
+            <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px] max-[768px]:leading-[110%]">
               Оптимизация рекламы
             </p>
           </div>
-          <div className="flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[60.38px]">
-            <Switch
-              checked={true}
-              className="min-[768px]:w-[47.11px] [&.ant-switch-checked]:!bg-[#54C24E] [&.ant-switch]:!h-[25.21px] [&.ant-switch-checked_.ant-switch-handle]:!left-[calc(100%-20px-2px)] [&.ant-switch-checked_.ant-switch-handle]:!top-[calc(100%-20px-1px)]"
-            />
-            <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px]">
+          <div className="bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[55.27px] min-[768px]:h-[60.38px]">
+            <Switch checked={true} />
+            <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px] max-[768px]:leading-[110%]">
               Поиск причин и решений
             </p>
           </div>
         </div>
-        <div className="relative ml-[5px]">
+        <div className="relative min-[768px]:ml-[5px]">
           <div className="relative z-20 flex items-center justify-center gap-[14.15px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] w-[320px] min-[768px]:w-[405.58px] h-[83px] min-[768px]:h-[105.44px] rounded-[17.57px]">
             <svg
               width="54"
@@ -119,7 +108,7 @@ export const Hero = () => {
           </div>
           <div
             onClick={() => setIsOpen(true)}
-            className="flex min-[768px]:hidden z-10 absolute items-end justify-center top-0 left-1/2 -translate-x-1/2 w-[calc(100%-38px)] h-[calc(100%+55px)] rounded-[17.57px] border border-[#4ABCFF]"
+            className="flex min-[768px]:hidden z-10 absolute items-end justify-center top-0 left-1/2 -translate-x-1/2 w-[calc(100%-38px)] h-[calc(100%+61px)] rounded-[17.57px] border border-[#4ABCFF]"
           >
             <p className="max-w-[247px] text-center text-[#335873] text-[12px] font-medium pb-[18px] leading-[125%] tracking-[-0.3px]">
               За 3 дня ассистент оптимизирует все ваши рекламные кампании и
@@ -133,13 +122,16 @@ export const Hero = () => {
         src={HeroImg}
         alt="hero"
       />
-      <div className="relative max-[1600px]:flex hidden">
-        <img
-          className="z-[30] w-[100%] absolute top-10 min-[768px]:-top-8 left-5"
-          src={HeroImg768}
-          alt="hero"
-        />
-      </div>
+      <img
+        className=" min-[360px]:hidden min-[768px]:block min-[1600px]:hidden z-[30] w-[100%] absolute top-10 min-[768px]:-top-8 left-5"
+        src={HeroImg768}
+        alt="hero"
+      />
+      <img
+        className=" min-[360px]:block min-[768px]:hidden z-[30] w-[100%] absolute top-131 left-0"
+        src={HeroImg360}
+        alt="hero"
+      />
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         {/* <ModalContent variant={"monitoring"} /> */}
         <ModalSlider />

@@ -22,7 +22,7 @@ export const FuncCard = ({ title, description, data }) => {
             </div>
           ))}
         </div>
-        <button className="min-[768px]:px-[40px] min-[1600px]:px-[46px] h-[59px] min-[768px]:h-[62px] min-[1600px]:h-[70px] rounded-[15.84px] min-[768px]:rounded-[18.81px] border border-[#4C3AFF] flex items-center justify-center gap-[6px] min-[768px]:gap-[7.51px] min-[1600px]:gap-2">
+        <button className="min-[1600px]:mt-[30px] min-[768px]:px-[40px] min-[1600px]:px-[40px] h-[59px] min-[768px]:h-[62px] min-[1600px]:h-[70px] rounded-[15.84px] min-[768px]:rounded-[18.81px] border border-[#4C3AFF] flex items-center justify-center gap-[6px] min-[768px]:gap-[7.51px] min-[1600px]:gap-2">
           <p className="text[13.16px] min-w-[142px] min-[768px]:text-[14.01px] min-[1600px]:text-[15.63px] font-bold text-blue-500 leading-[105%] uppercase">
             Посмотреть демо
           </p>

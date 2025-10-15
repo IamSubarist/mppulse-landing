@@ -5,7 +5,7 @@ import { BigCard } from "../components/KeyFunctions/BigCard";
 
 export const KeyFunctions = () => {
   return (
-    <div className="keyfunc-section min-[360px]:px-[2.605%] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative h-[2400px] min-[768px]:h-[2210px] min-[1600px]:h-[1890px]">
+    <div className="keyfunc-section min-[360px]:px-[2.605%] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative h-[2400px] min-[768px]:h-[2192px] min-[1600px]:h-[1870px]">
       <div className="absolute min-[1600px]:-top-[161px] min-[768px]:top-[264px] left-1/2 -translate-x-1/2">
         <BigCard />
       </div>

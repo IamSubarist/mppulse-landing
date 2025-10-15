@@ -11,12 +11,12 @@ export const PeriodToggle = ({ onPeriodChange }) => {
   };
 
   return (
-    <div className="flex items-center w-[250px] min-[768px]:w-[304.94px] min-[1600px]:w-[380px] h-[57px] min-[768px]:h-[56px] min-[1600px]:h-[70px] border-3 border-white rounded-[13.93px] min-[768px]:rounded-[18.81px] uppercase mb-[40px] min-[768px]:mb-[40px] min-[1600px]:mb-[36px]">
+    <div className="flex items-center w-[250px] min-[768px]:w-[304.94px] min-[1600px]:w-[380px] h-[57px] min-[768px]:h-[56px] min-[1600px]:h-[70px] border-3 border-white rounded-[13.93px] min-[768px]:rounded-[15.09px] min-[1600px]:rounded-[18.81px] uppercase mb-[40px] min-[768px]:mb-[40px] min-[1600px]:mb-[36px]">
       <button
         onClick={() => handlePeriodChange("1 месяц")}
         className={`uppercase h-full w-1/2 flex items-center justify-center font-bold text-[14px] min-[768px]:text-[19.26px] min-[1600px]:text-[24px] leading-[105%] transition-all duration-200 ${
           selectedPeriod === "1 месяц"
-            ? "bg-white text-[#467FFA] rounded-[10.93px] min-[768px]:rounded-[14.81px]"
+            ? "bg-white text-[#467FFA] rounded-[10.93px] min-[768px]:rounded-[12px] min-[1600px]:rounded-[14.81px]"
             : "bg-transparent text-white hover:bg-white/20"
         }`}
       >
@@ -26,7 +26,7 @@ export const PeriodToggle = ({ onPeriodChange }) => {
         onClick={() => handlePeriodChange("6 месяцев")}
         className={`uppercase h-full w-1/2 flex items-center justify-center font-bold text-[14px] min-[768px]:text-[19.26px] min-[1600px]:text-[24px] leading-[105%] relative transition-all duration-200 ${
           selectedPeriod === "6 месяцев"
-            ? "bg-white text-[#467FFA] rounded-[10.93px] min-[768px]:rounded-[14.81px]"
+            ? "bg-white text-[#467FFA] rounded-[10.93px] min-[768px]:rounded-[12px] min-[1600px]:rounded-[14.81px]"
             : "bg-transparent text-white hover:bg-white/20"
         }`}
       >

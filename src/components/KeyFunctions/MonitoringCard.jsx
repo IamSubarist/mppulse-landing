@@ -39,7 +39,7 @@ export const MonitoringCard = ({ title, description, data }) => {
             ))}
             {/* Кнопка в конце правой колонки */}
             <div className="flex items-start gap-2 relative pl-1 mt-[8px]">
-              <button className="min-[768px]:h-[62px] min-[1600px]:h-[70px] rounded-[18.81px] bg-gradient-to-r from-[#4C3AFF] to-[#49BCFF] flex items-center justify-center min-[768px]:gap-[7.51px] min-[1600px]:gap-2 p-[2px]">
+              <button className="w-full min-[768px]:h-[62px] min-[1600px]:h-[70px] rounded-[18.81px] bg-gradient-to-r from-[#4C3AFF] to-[#49BCFF] flex items-center justify-center min-[768px]:gap-[7.51px] min-[1600px]:gap-2 p-[2px]">
                 <div className="w-full h-full rounded-[16px] bg-white flex items-center justify-center gap-2">
                   <p className="min-w-[142px] min-[768px]:text-[14.01px] min-[1600px]:text-[15.63px] font-bold bg-gradient-to-r from-[#4C3AFF] to-[#49BCFF] bg-clip-text text-transparent leading-[105%] uppercase">
                     Посмотреть демо
