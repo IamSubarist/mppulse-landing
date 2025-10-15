@@ -81,7 +81,7 @@ export const Hero = () => {
               fill="black"
             />
           </svg>
-          <p className="max-[768px]:w-[254px] text-[15px] min-[768px]:text-[19.67px] leading-[135%] opacity-50 tracking-[-0.4px]">
+          <p className="max-[370px]:w-[254px] text-[15px] min-[768px]:text-[19.67px] leading-[135%] opacity-50 tracking-[-0.4px]">
             Он сам анализирует карточки, рекламу и конкурентов, показывает какие{" "}
             <br className="max-[768px]:hidden" />
             показатели просели и где теряется прибыль — и подсказывает, что
@@ -94,11 +94,15 @@ export const Hero = () => {
           }`}
         >
           <div
-            className={`bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[55.27px] min-[768px]:h-[60.38px] transition-all duration-500 ${
+            className={`bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] h-[55.27px] min-[768px]:h-[60.38px] transition-all duration-500 ${
               switchStates[0]
                 ? "scale-100 opacity-100 shadow-lg"
                 : "scale-95 opacity-70"
             }`}
+            style={{
+              width:
+                "clamp(156.12px, 156.12px + (100vw - 360px) * (311.2 - 156.12) / (768 - 360), 311.2px)",
+            }}
           >
             <Switch checked={switchStates[0]} />
             <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px] max-[768px]:leading-[110%]">
@@ -106,11 +110,15 @@ export const Hero = () => {
             </p>
           </div>
           <div
-            className={`bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[55.27px] min-[768px]:h-[60.38px] transition-all duration-500 ${
+            className={`bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] h-[55.27px] min-[768px]:h-[60.38px] transition-all duration-500 ${
               switchStates[1]
                 ? "scale-100 opacity-100 shadow-lg"
                 : "scale-95 opacity-70"
             }`}
+            style={{
+              width:
+                "clamp(156.12px, 156.12px + (100vw - 360px) * (327.12 - 156.12) / (768 - 360), 327.12px)",
+            }}
           >
             <Switch checked={switchStates[1]} />
             <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px] max-[768px]:leading-[110%]">
@@ -118,11 +126,15 @@ export const Hero = () => {
             </p>
           </div>
           <div
-            className={`bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[55.27px] min-[768px]:h-[60.38px] transition-all duration-500 ${
+            className={`bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] h-[55.27px] min-[768px]:h-[60.38px] transition-all duration-500 ${
               switchStates[2]
                 ? "scale-100 opacity-100 shadow-lg"
                 : "scale-95 opacity-70"
             }`}
+            style={{
+              width:
+                "clamp(156.12px, 156.12px + (100vw - 360px) * (311.2 - 156.12) / (768 - 360), 311.2px)",
+            }}
           >
             <Switch checked={switchStates[2]} />
             <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px] max-[768px]:leading-[110%]">
@@ -130,11 +142,15 @@ export const Hero = () => {
             </p>
           </div>
           <div
-            className={`bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[55.27px] min-[768px]:h-[60.38px] transition-all duration-500 ${
+            className={`bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] h-[55.27px] min-[768px]:h-[60.38px] transition-all duration-500 ${
               switchStates[3]
                 ? "scale-100 opacity-100 shadow-lg"
                 : "scale-95 opacity-70"
             }`}
+            style={{
+              width:
+                "clamp(156.12px, 156.12px + (100vw - 360px) * (327.12 - 156.12) / (768 - 360), 327.12px)",
+            }}
           >
             <Switch checked={switchStates[3]} />
             <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px] max-[768px]:leading-[110%]">
@@ -147,7 +163,7 @@ export const Hero = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <div className="relative z-20 flex items-center justify-center gap-[14.15px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] w-[320px] min-[768px]:w-[405.58px] h-[83px] min-[768px]:h-[105.44px] rounded-[17.57px] hover:scale-105 transition-transform duration-300 cursor-pointer">
+          <div className="relative z-20 flex items-center justify-center gap-[14.15px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] w-full min-[768px]:w-[405.58px] h-[83px] min-[768px]:h-[105.44px] rounded-[17.57px] hover:scale-105 transition-transform duration-300 cursor-pointer">
             <svg
               width="54"
               height="39"
@@ -200,12 +216,12 @@ export const Hero = () => {
         alt="hero"
       />
       <img
-        className=" min-[360px]:hidden min-[768px]:block min-[1600px]:hidden z-[30] w-[100%] absolute top-10 min-[768px]:top-144 left-0"
+        className="max-w-[820px] max-h-[543.41px] min-[360px]:hidden min-[768px]:block min-[1600px]:hidden z-[30] absolute top-10 min-[768px]:top-144 left-0"
         src={HeroImg768}
         alt="hero"
       />
       <img
-        className=" min-[360px]:block min-[768px]:hidden z-[30] w-[100%] absolute top-138 left-0"
+        className="max-w-[399px] max-h-[264.42px] min-[360px]:block min-[768px]:hidden z-[30] absolute -bottom-8 left-1/2 -translate-x-1/2"
         src={HeroImg360}
         alt="hero"
       />

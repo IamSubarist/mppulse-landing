@@ -41,9 +41,9 @@ const Header = () => {
       </div>
 
       <div className="flex items-center min-[1600px]:gap-4 min-[768px]:gap-[29px]">
-        <button className="hidden sm:flex relative min-[1600px]:w-[218px] min-[1600px]:h-[55px] min-[768px]:w-[198px] min-[768px]:h-[50px] min-[1600px]:rounded-[14.44px] rounded-[13.13px]  p-[2px] bg-gradient-to-r from-[#4C3AFF] to-[#49BCFF]">
+        <button className="cursor-pointer hidden sm:flex relative min-[1600px]:w-[218px] min-[1600px]:h-[55px] min-[768px]:w-[198px] min-[768px]:h-[50px] min-[1600px]:rounded-[14.44px] rounded-[13.13px]  p-[2px] bg-gradient-to-r from-[#4C3AFF] to-[#49BCFF]">
           <div className="w-full h-full rounded-[12px] bg-white flex items-center justify-center gap-2">
-            <p className="in-[1600px]:text-[12px] text-[10.91px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#4C3AFF] to-[#49BCFF]">
+            <p className="cursor-pointer in-[1600px]:text-[12px] text-[10.91px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#4C3AFF] to-[#49BCFF]">
               Попробовать бесплатно
             </p>
           </div>

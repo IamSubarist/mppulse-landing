@@ -3,15 +3,17 @@ import React from "react";
 export const FuncCard = ({ title, description, data, numb }) => {
   return (
     <div className="relative flex flex-col items-center justify-center">
-        <div className="bg-white text-blue-500 rounded-full w-[60px] h-[60px] absolute top-[-42px] left-[48px] z-30 text-center">
-          <h3 className="text-[24px] pt-[22%] font-bold">{numb}</h3>
-        </div>
-      <div className="max-[768px]:w-[320px] min-h-[384px] min-[768px]:min-h-[425px] z-20 shadow-xl rounded-[25px] bg-white flex flex-col px-[37px] min-[768px]:px-[38px] min-[1600px]:px-[44px] py-[37px] min-[768px]:py-[44px_36px] min-[1600px]:py-[44px_44px]"
-      style={{
-        maskImage: 'radial-gradient(ellipse 36px 26px at 79px 0%, transparent 100%, black 100%)',
-        maskSize: '100% 100%',
-        maskRepeat: 'no-repeat'
-      }}
+      <div className="bg-white text-blue-500 rounded-full w-[60px] h-[60px] absolute top-[-42px] left-[48px] z-30 text-center">
+        <h3 className="text-[24px] pt-[22%] font-bold">{numb}</h3>
+      </div>
+      <div
+        className="w-full min-h-[384px] min-[768px]:min-h-[425px] z-20 shadow-xl rounded-[25px] bg-white flex flex-col px-[37px] min-[768px]:px-[38px] min-[1600px]:px-[44px] py-[37px] min-[768px]:py-[44px_36px] min-[1600px]:py-[44px_44px]"
+        style={{
+          maskImage:
+            "radial-gradient(ellipse 36px 26px at 79px 0%, transparent 100%, black 100%)",
+          maskSize: "100% 100%",
+          maskRepeat: "no-repeat",
+        }}
       >
         <div className="flex flex-col gap-[10.84px] min-[768px]:gap-[9.95px] min-[1600px]:gap-[13px] mb-[26.11px] min-[768px]:mb-[26.84px] min-[1600px]:mb-[30px]">
           <p className="text-[20px] text-[#1D1D1D] min-[768px]:text-[21.51px] min-[1600px]:text-[24px] font-bold leading-[110%] tracking-[-0.6px]">
@@ -31,7 +33,7 @@ export const FuncCard = ({ title, description, data, numb }) => {
             </div>
           ))}
         </div>
-        <button className="max-[768px]:mt-[22px] min-[1600px]:mt-[30px] min-[768px]:px-[40px] min-[1600px]:px-[40px] h-[59px] min-[768px]:h-[62px] min-[1600px]:h-[70px] rounded-[15.84px] min-[768px]:rounded-[18.81px] border border-[#4C3AFF] flex items-center justify-center gap-[6px] min-[768px]:gap-[7.51px] min-[1600px]:gap-2">
+        <button className="cursor-pointer max-[768px]:mt-[22px] min-[1600px]:mt-[30px] min-[768px]:px-[40px] min-[1600px]:px-[40px] h-[59px] min-[768px]:h-[62px] min-[1600px]:h-[70px] rounded-[15.84px] min-[768px]:rounded-[18.81px] border border-[#4C3AFF] flex items-center justify-center gap-[6px] min-[768px]:gap-[7.51px] min-[1600px]:gap-2">
           <p className="text[13.16px] min-w-[142px] min-[768px]:text-[14.01px] min-[1600px]:text-[15.63px] font-bold text-blue-500 leading-[105%] uppercase">
             Посмотреть демо
           </p>
@@ -54,6 +56,8 @@ export const FuncCard = ({ title, description, data, numb }) => {
         </button>
       </div>
       <div className="max-[768px]:hidden shadow-xl z-10 absolute top-0 right-1/2 translate-x-1/2 w-[calc(100%-38px)] h-[calc(100%-15px)] rounded-[25px] bg-white opacity-50 mt-[30px]"></div>
+      {/* Большая тень под блоком */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[calc(100%+80px)] h-full bg-blue-900 opacity-15 blur-3xl rounded-[60px]"></div>
     </div>
   );
 };

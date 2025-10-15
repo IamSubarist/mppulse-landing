@@ -1,6 +1,13 @@
 import React from "react";
 
-export const RateCard768 = ({ title, description, data, price, discount }) => {
+export const RateCard768 = ({
+  title,
+  description,
+  data,
+  price,
+  discount,
+  selectedPeriod,
+}) => {
   return (
     <div className="relative flex flex-col items-center justify-center">
       {discount && (
@@ -69,7 +76,7 @@ export const RateCard768 = ({ title, description, data, price, discount }) => {
               {price} руб/мес
             </p>
             <div>
-              <button className="min-[768px]:w-[261.69px] min-[1600px]:w-[292px] min-[768px]:h-[68.03px] min-[1600px]:h-[75.91px] rounded-[12.65px] bg-[#4C3AFF] flex items-center justify-center gap-2">
+              <button className="cursor-pointer min-[768px]:w-[261.69px] min-[1600px]:w-[292px] min-[768px]:h-[68.03px] min-[1600px]:h-[75.91px] rounded-[12.65px] bg-gradient-to-r from-[#4C3AFF] to-[#49BCFF] flex items-center justify-center gap-2">
                 <p className="min-[768px]:text-[16.13px] min-[1600px]:text-[18px] font-bold text-white leading-[105%] uppercase">
                   Подключить
                 </p>

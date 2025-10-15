@@ -53,9 +53,9 @@ export const KeyFunctions = () => {
     };
   }, []);
   return (
-    <div className="keyfunc-section min-[360px]:px-[2.605%] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative h-[2618px] min-[768px]:h-[2192px] min-[1600px]:h-[1870px]">
+    <div className="keyfunc-section px-[20px] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative h-[2618px] min-[768px]:h-[2192px] min-[1600px]:h-[1870px]">
       <div className="absolute top-[80px] min-[1600px]:-top-[161px] min-[768px]:top-[264px] left-1/2 -translate-x-1/2">
-        <BigCard icon="light"/>
+        <BigCard icon="light" />
       </div>
       <div className="pt-[724px] min-[768px]:pt-[970px] min-[1600px]:pt-[624px]">
         <p
@@ -109,7 +109,7 @@ export const KeyFunctions = () => {
             }`}
           >
             <FuncCard
-            numb="01"
+              numb="01"
               title="Оцифровка + РНП"
               description="Инструменты, показывающие точное состояние вашего бизнеса на Вайлдберриз"
               data={[
@@ -150,7 +150,7 @@ export const KeyFunctions = () => {
             }`}
           >
             <FuncCard
-            numb="03"
+              numb="03"
               title="Оптимизация ключей"
               description="Ai-менеджер по рекламе оптимизирует все ваши рекламные кампании и уменьшит ДРР"
               data={[

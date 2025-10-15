@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import StepOne from "../../assets/StepOne.png";
 import StepTwo from "../../assets/StepTwo.png";
 import StepThree from "../../assets/StepThree.png";
-import steam from "../../assets/staem.svg"
+import steam from "../../assets/staem.svg";
 export const BigCard = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [stepStates, setStepStates] = useState([false, false, false]);
@@ -59,16 +59,17 @@ export const BigCard = () => {
           : "opacity-0 translate-y-8 scale-95"
       }`}
     >
-        <div className=" text-blue-500 rounded-full w-[75px] h-[55px] absolute top-[-30px] min-[1600px]:left-[48%] min-[768px]:left-[46%] left-[46%] z-30">
-          <img src={steam} alt="icon" className="w-[58px] h-[58px]"/>
-        </div>
+      <div className=" text-blue-500 rounded-full w-[75px] h-[55px] absolute top-[-30px] min-[1600px]:left-[48%] min-[768px]:left-[46%] left-[46%] z-30">
+        <img src={steam} alt="icon" className="w-[58px] h-[58px]" />
+      </div>
       <div
         id="howItWork"
-        className="shadow-xl min-[768px]:pt-[62px] min-[1600px]:pt-[120px] min-[768px]:rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[40px] min-[1600px]:px-[120px] py-[44px_44px] min-[768px]:py-[44px_42px] min-[1600px]:py-[44px_118px] gap-[10px] min-[768px]:gap-[8px] min-[1600px]:gap-[10px]"
+        className="z-20 shadow-xl min-[768px]:pt-[62px] min-[1600px]:pt-[120px] min-[768px]:rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[40px] min-[1600px]:px-[120px] py-[44px_44px] min-[768px]:py-[44px_42px] min-[1600px]:py-[44px_118px] gap-[10px] min-[768px]:gap-[8px] min-[1600px]:gap-[10px]"
         style={{
-          maskImage: 'radial-gradient(ellipse 50px 50px at 50% 0%, transparent 100%, black 100%)',
-          maskSize: '100% 100%',
-          maskRepeat: 'no-repeat'
+          maskImage:
+            "radial-gradient(ellipse 50px 50px at 50% 0%, transparent 100%, black 100%)",
+          maskSize: "100% 100%",
+          maskRepeat: "no-repeat",
         }}
       >
         <div
@@ -322,6 +323,8 @@ export const BigCard = () => {
         </div>
       </div>
       <div className="hidden min-[768px]:block shadow-xl -z-10 absolute top-0 right-1/2 translate-x-1/2 w-[calc(100%-120px)] h-[calc(100%-25px)] rounded-[25px] bg-white opacity-50 mt-[50px]"></div>
+      {/* Большая тень под блоком */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[calc(100%+80px)] h-full bg-blue-500 opacity-15 blur-3xl rounded-[60px]"></div>
     </div>
   );
 };

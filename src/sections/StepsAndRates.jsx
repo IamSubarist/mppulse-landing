@@ -8,14 +8,47 @@ export const StepsAndRates = () => {
   const [selectedPeriod, setSelectedPeriod] = useState("1 месяц");
   const [isVisible, setIsVisible] = useState(false);
   const [cardStates, setCardStates] = useState([false, false, false]);
+  const [isRerendering, setIsRerendering] = useState(false);
   const [titleAnimation, setTitleAnimation] = useState({
     show: false,
     assemble: false,
     magnetic: false,
   });
 
+  // Функция для расчета цены в зависимости от периода
+  const calculatePrice = (basePrice, period) => {
+    if (period === "6 месяцев") {
+      // Применяем 25% скидку для 6 месяцев
+      return Math.round(basePrice * 0.75);
+    }
+    return basePrice;
+  };
+
   const handlePeriodChange = (period) => {
-    setSelectedPeriod(period);
+    if (period === selectedPeriod) return;
+
+    // Запускаем анимацию перерендера
+    setIsRerendering(true);
+    setCardStates([false, false, false]);
+
+    // Через небольшую задержку обновляем период и запускаем анимацию появления
+    setTimeout(() => {
+      setSelectedPeriod(period);
+      setIsRerendering(false);
+
+      // Анимация появления карточек с задержкой
+      const cardDelays = [100, 200, 300]; // Быстрые задержки для перерендера
+
+      cardDelays.forEach((delay, index) => {
+        setTimeout(() => {
+          setCardStates((prev) => {
+            const newStates = [...prev];
+            newStates[index] = true;
+            return newStates;
+          });
+        }, delay);
+      });
+    }, 300);
   };
 
   useEffect(() => {
@@ -93,7 +126,7 @@ export const StepsAndRates = () => {
         >
           <div
             className={`transition-all duration-700 hover:scale-105 hover:shadow-lg ${
-              cardStates[0]
+              cardStates[0] && !isRerendering
                 ? "opacity-100 translate-y-0 scale-100"
                 : "opacity-0 translate-y-4 scale-95"
             }`}
@@ -116,12 +149,13 @@ export const StepsAndRates = () => {
                   description: "до 50 артикулов",
                 },
               ]}
-              price={999}
+              price={calculatePrice(999, selectedPeriod)}
+              selectedPeriod={selectedPeriod}
             />
           </div>
           <div
             className={`transition-all duration-700 hover:scale-105 hover:shadow-lg ${
-              cardStates[1]
+              cardStates[1] && !isRerendering
                 ? "opacity-100 translate-y-0 scale-100"
                 : "opacity-0 translate-y-4 scale-95"
             }`}
@@ -143,12 +177,13 @@ export const StepsAndRates = () => {
                   description: "до 50 артикулов",
                 },
               ]}
-              price={1999}
+              price={calculatePrice(1999, selectedPeriod)}
+              selectedPeriod={selectedPeriod}
             />
           </div>
           <div
             className={`transition-all duration-700 hover:scale-105 hover:shadow-lg ${
-              cardStates[2]
+              cardStates[2] && !isRerendering
                 ? "opacity-100 translate-y-0 scale-100"
                 : "opacity-0 translate-y-4 scale-95"
             }`}
@@ -170,7 +205,8 @@ export const StepsAndRates = () => {
                   description: "без ограничений по кол-ву артикулов",
                 },
               ]}
-              price={2999}
+              price={calculatePrice(2999, selectedPeriod)}
+              selectedPeriod={selectedPeriod}
             />
           </div>
         </div>
@@ -181,14 +217,14 @@ export const StepsAndRates = () => {
         >
           <div
             className={`flex gap-[26.89px] transition-all duration-700 ${
-              cardStates[0]
+              cardStates[0] && !isRerendering
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
             }`}
           >
             <div
               className={`transition-all duration-700 hover:scale-105 hover:shadow-lg ${
-                cardStates[0]
+                cardStates[0] && !isRerendering
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-4 scale-95"
               }`}
@@ -211,12 +247,13 @@ export const StepsAndRates = () => {
                     description: "до 50 артикулов",
                   },
                 ]}
-                price={999}
+                price={calculatePrice(999, selectedPeriod)}
+                selectedPeriod={selectedPeriod}
               />
             </div>
             <div
               className={`transition-all duration-700 hover:scale-105 hover:shadow-lg ${
-                cardStates[1]
+                cardStates[1] && !isRerendering
                   ? "opacity-100 translate-y-0 scale-100"
                   : "opacity-0 translate-y-4 scale-95"
               }`}
@@ -238,13 +275,14 @@ export const StepsAndRates = () => {
                     description: "до 50 артикулов",
                   },
                 ]}
-                price={1999}
+                price={calculatePrice(1999, selectedPeriod)}
+                selectedPeriod={selectedPeriod}
               />
             </div>
           </div>
           <div
             className={`transition-all duration-700 hover:scale-105 hover:shadow-lg ${
-              cardStates[2]
+              cardStates[2] && !isRerendering
                 ? "opacity-100 translate-y-0 scale-100"
                 : "opacity-0 translate-y-4 scale-95"
             }`}
@@ -266,7 +304,8 @@ export const StepsAndRates = () => {
                   description: "без ограничений по кол-ву артикулов",
                 },
               ]}
-              price={2999}
+              price={calculatePrice(2999, selectedPeriod)}
+              selectedPeriod={selectedPeriod}
             />
           </div>
         </div>
