@@ -17,7 +17,7 @@ export const StepsAndRates = () => {
         <BigCard />
       </div>
       <div className="pt-[424px] min-[768px]:pt-[342px] min-[1600px]:pt-[490px] flex flex-col items-center justify-center">
-        <p className="text-[28px] min-[768px]:text-[47.04px] font-bold leading-[115%] tracking-[-1.5px] mb-[17px] min-[768px]:mb-[26px] min-[1600px]:mb-[38px] text-center text-white">
+        <p id="tarif" className="text-[28px] min-[768px]:text-[47.04px] font-bold leading-[115%] tracking-[-1.5px] mb-[17px] min-[768px]:mb-[26px] min-[1600px]:mb-[38px] text-center text-white">
           Тарифы
         </p>
         <PeriodToggle onPeriodChange={handlePeriodChange} />

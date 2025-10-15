@@ -6,7 +6,7 @@ import StepThree from "../../assets/StepThree.png";
 export const BigCard = () => {
   return (
     <div className="relative flex flex-col items-center justify-center">
-      <div className="shadow-xl min-[768px]:pt-[62px] min-[1600px]:pt-[120px] min-[768px]:rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[40px] min-[1600px]:px-[120px] py-[44px_44px] min-[768px]:py-[44px_42px] min-[1600px]:py-[44px_118px] gap-[10px] min-[768px]:gap-[8px] min-[1600px]:gap-[10px]">
+      <div id="howItWork" className="shadow-xl min-[768px]:pt-[62px] min-[1600px]:pt-[120px] min-[768px]:rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[40px] min-[1600px]:px-[120px] py-[44px_44px] min-[768px]:py-[44px_42px] min-[1600px]:py-[44px_118px] gap-[10px] min-[768px]:gap-[8px] min-[1600px]:gap-[10px]">
         <div className="text-[24px] min-[768px]:text-[30px] min-[1600px]:text-[47.04px] tracking-[-1.3px] text-center">
           <p className="text-[#1D1D1D] leading-[115%] tracking-[-1px] max-[768px]:px-10 max-[768px]:pt-[6px]">
             <span className="text-[#000000] font-bold leading-[115%]">

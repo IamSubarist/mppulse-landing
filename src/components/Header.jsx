@@ -9,14 +9,13 @@ import { useViewport } from "../hooks/use-viewport";
 
 const Header = () => {
   const navItems = [
-    { label: "Функции", path: "/" },
-    { label: "Как это работает", path: "/about" },
-    { label: "Тарифы", path: "/tarif" },
-    { label: "FAQ", path: "/faq" },
+    { label: "Функции", path: "#func" },
+    { label: "Как это работает", path: "#howItWork" },
+    { label: "Тарифы", path: "#tarif" },
+    { label: "FAQ", path: "#faq" },
   ];
   const [isOpen, setIsOpen] = useState(false);
   const [_, width] = useViewport();
-  
 
   return (
     <header className="pt-[20px] min-[768px]:pb-[43px]  min-[1600px]:py-[38px] flex items-center w-full justify-between gap-[56px] pb-[15px]">
@@ -29,12 +28,12 @@ const Header = () => {
           <ul className="flex items-center w-[388px] justify-between text-[16px] font-medium">
             {navItems.map((item) => (
               <li key={item.path}>
-                <Link
-                  to={item.path}
+                <a
+                  href={item.path}
                   className="font-medium relative pb-1 text-[#5C6D86] text-sm hover:text-[#4C3AFF] transition-colors underline"
                 >
                   {item.label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
@@ -65,7 +64,6 @@ const Header = () => {
         onClose={() => setIsOpen(false)}
         headerStyle={{ display: "none" }}
         bodyStyle={{ padding: 0 }}
-        mask={width < 768 ? false : true}
       >
         <div className="max-md:bg-[#F7F7F7] pt-[30px] max-md:pt-[20px] px-[30px] max-md:px-[20px]">
           <div className="flex justify-between items-center border-b border-[#E7E7E7] pb-[24px] max-md:pb-[17px]">
@@ -80,56 +78,55 @@ const Header = () => {
             </button>
           </div>
 
-          <div className="text-[21px] text-[#5C6D86] pt-[15px] pb-[19px] font-medium border-b border-[#E7E7E7] tracking-[-0.4px]">
-            Функции
-          </div>
-          <div className="text-[21px] text-[#5C6D86] pt-[15px] pb-[19px] font-medium border-b border-[#E7E7E7] tracking-[-0.4px]">
-            Как это работает
-          </div>
-          <div className="text-[21px] text-[#5C6D86] pt-[15px] pb-[19px] font-medium border-b border-[#E7E7E7] tracking-[-0.4px]">
-            Тарифы
-          </div>
-          <div className="text-[21px] text-[#5C6D86] pt-[15px] pb-[19px] font-medium tracking-[-0.4px]">
-            FAQ
-          </div>
+          {navItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.path}
+              onClick={() => setIsOpen(false)}
+              className={`block text-[21px] !text-[#5C6D86] pt-[15px] pb-[19px] font-medium tracking-[-0.4px] ${
+                index !== navItems.length - 1 ? "border-b border-[#E7E7E7]" : ""
+              }`}
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
 
         <div className="px-[30px] max-md:px-[20px] pb-[30px] max-md:pb-[20px]">
-        <div className="flex flex-col pt-[27px] gap-2">
-          <span className="text-black text-[14px] font-semibold">
-            Поддержка:
-          </span>
-          <div className="text-[#35ACE1] font-semibold flex flex-col gap-1">
-            <div className="flex gap-2 items-center tracking-[-0.3px]">
-              <img src={TG_LOGO} className="size-[20.24px] shrink-0" />
-              @mppulse_support
-            </div>
-            <div className="flex gap-2 items-center tracking-[-0.12px]">
-              <img src={MAIL} className="size-[19px] shrink-0" />
-              mppulse_support@mail.ru
+          <div className="flex flex-col pt-[27px] gap-2">
+            <span className="text-black text-[14px] font-semibold">
+              Поддержка:
+            </span>
+            <div className="text-[#35ACE1] font-semibold flex flex-col gap-1">
+              <div className="flex gap-2 items-center tracking-[-0.3px]">
+                <img src={TG_LOGO} className="size-[20.24px] shrink-0" />
+                @mppulse_support
+              </div>
+              <div className="flex gap-2 items-center tracking-[-0.12px]">
+                <img src={MAIL} className="size-[19px] shrink-0" />
+                mppulse_support@mail.ru
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="flex flex-col text-[#5C6D86] text-[12px] font-medium pt-[20px] gap-1">
-          <span className="tracking-[-0.4px] underline">
-            Политика конфиденциальности
-          </span>
-          <span className="tracking-[-0.4px] underline">
-            Согласие на обработку персональных данных
-          </span>
-        </div>
+          <div className="flex flex-col text-[#5C6D86] text-[12px] font-medium pt-[20px] gap-1">
+            <span className="tracking-[-0.4px] underline">
+              Политика конфиденциальности
+            </span>
+            <span className="tracking-[-0.4px] underline">
+              Согласие на обработку персональных данных
+            </span>
+          </div>
 
-        <p className="text-[#5C6D86] font-medium text-[12px] leading-[145%] tracking-[-0.39px] pt-[19px] opacity-50">
-          Все цены указанные на сайте носят исключительно информативный характер
-          и не являются публично офертой, определяемой ст. 437 ГК РФ
-        </p>
+          <p className="text-[#5C6D86] font-medium text-[12px] leading-[145%] tracking-[-0.39px] pt-[19px] opacity-50">
+            Все цены указанные на сайте носят исключительно информативный
+            характер и не являются публично офертой, определяемой ст. 437 ГК РФ
+          </p>
 
-        <div className="text-[12px] text-[#5C6D86] pt-[20px] font-medium tracking-[-0.6px]">
-          ИП Иванов И.И. ИНН 93939293
+          <div className="text-[12px] text-[#5C6D86] pt-[20px] font-medium tracking-[-0.6px]">
+            ИП Иванов И.И. ИНН 93939293
+          </div>
         </div>
-        </div>
-
       </Drawer>
     </header>
   );

@@ -49,7 +49,7 @@ export const Questions = () => {
         style={{ backgroundImage: `url(${BACK})` }}
       />
       <div className="pt-[40px] min-[768px]:pt-[62px] min-[1600px]:pt-[136px] flex flex-col items-center justify-center">
-        <p className="min-[1600px]:text-[47.04px] min-[768px]:text-[30px] text-[24px] font-bold leading-[115%] min-[1600px]:tracking-[-1.5px] tracking-[-0.9px] min-[1600px]:mb-[56px] min-[768px]:mb-[39px] mb-[20px] text-center z-10">
+        <p id="faq" className="min-[1600px]:text-[47.04px] min-[768px]:text-[30px] text-[24px] font-bold leading-[115%] min-[1600px]:tracking-[-1.5px] tracking-[-0.9px] min-[1600px]:mb-[56px] min-[768px]:mb-[39px] mb-[20px] text-center z-10">
           <span className="text-[#4C51FF]">Ответы</span> на часто{" "}
           <br className="md:hidden" /> задаваемые вопросы
         </p>
