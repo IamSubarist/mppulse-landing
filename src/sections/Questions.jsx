@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { QuestionCard } from "../components/Questions/QuestionCard";
 import BACK from "../assets/backCircle.svg";
 
 export const Questions = () => {
   const [openQuestion, setOpenQuestion] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [questionStates, setQuestionStates] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+  const [titleAnimation, setTitleAnimation] = useState({
+    show: false,
+    assemble: false,
+    magnetic: false,
+  });
 
   const questions = [
     {
@@ -42,32 +55,106 @@ export const Questions = () => {
     setOpenQuestion(openQuestion === questionId ? null : questionId);
   };
 
+  useEffect(() => {
+    // Анимация появления секции
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 200);
+
+    // Анимация заголовка с эффектом сборки
+    const titleTimers = [
+      setTimeout(
+        () => setTitleAnimation((prev) => ({ ...prev, show: true })),
+        300
+      ),
+      setTimeout(
+        () => setTitleAnimation((prev) => ({ ...prev, assemble: true })),
+        500
+      ),
+      setTimeout(
+        () => setTitleAnimation((prev) => ({ ...prev, magnetic: true })),
+        700
+      ),
+    ];
+
+    // Анимация вопросов с задержкой
+    const questionDelays = [800, 1000, 1200, 1400, 1600]; // Задержки для каждого вопроса
+
+    questionDelays.forEach((delay, index) => {
+      setTimeout(() => {
+        setQuestionStates((prev) => {
+          const newStates = [...prev];
+          newStates[index] = true;
+          return newStates;
+        });
+      }, delay);
+    });
+
+    return () => {
+      clearTimeout(timer);
+      titleTimers.forEach((timer) => clearTimeout(timer));
+    };
+  }, []);
+
   return (
     <div className="questions-section min-[1600px]:px-[360px] px-0 relative pb-[130px] bg-[#F7F7F7] min-[768px]:h-[1280px] min-[1600px]:h-[1754px]">
       <div
         className="absolute min-[1600px]:bottom-[125px] min-[768px]:bottom-[50px] bottom-[207px] left-1/2 -translate-x-1/2 w-full min-[1600px]:h-[1500px] min-[768px]:h-[1228px] h-[687px] bg-cover bg-no-repeat bg-center z-0 pointer-events-none"
         style={{ backgroundImage: `url(${BACK})` }}
       />
-      <div className="pt-[40px] min-[768px]:pt-[62px] min-[1600px]:pt-[136px] flex flex-col items-center justify-center">
-        <p id="faq" className="min-[1600px]:text-[47.04px] min-[768px]:text-[30px] text-[24px] font-bold leading-[115%] min-[1600px]:tracking-[-1.5px] tracking-[-0.9px] min-[1600px]:mb-[56px] min-[768px]:mb-[39px] mb-[20px] text-center z-10">
-          <span className="text-[#4C51FF]">Ответы</span> на часто{" "}
-          <br className="md:hidden" /> задаваемые вопросы
+      <div
+        className={`pt-[40px] min-[768px]:pt-[62px] min-[1600px]:pt-[136px] flex flex-col items-center justify-center transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      >
+        <p
+          id="faq"
+          className={`min-[1600px]:text-[47.04px] min-[768px]:text-[30px] text-[24px] font-bold leading-[115%] min-[1600px]:tracking-[-1.5px] tracking-[-0.9px] min-[1600px]:mb-[56px] min-[768px]:mb-[39px] mb-[20px] text-center z-10 ${
+            titleAnimation.show ? "opacity-100" : "opacity-0"
+          } transition-all duration-1000 ease-out`}
+        >
+          <span
+            className={`inline-block transition-all duration-700 ease-out ${
+              titleAnimation.assemble
+                ? "opacity-100 translate-x-0 scale-100"
+                : "opacity-0 -translate-x-8 scale-75"
+            } ${titleAnimation.magnetic ? "animate-pulse" : ""}`}
+          >
+            <span className="text-[#4C51FF]">Ответы</span> на часто{" "}
+            <br className="md:hidden" /> задаваемые вопросы
+          </span>
         </p>
-        <div className="relative flex flex-col min-[1600px]:pb-[312px] min-[768px]:pb-[233px] pb-[124px] ">
+        <div
+          className={`relative flex flex-col min-[1600px]:pb-[312px] min-[768px]:pb-[233px] pb-[124px] transition-all duration-1000 delay-600 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="w-full flex flex-col min-[1600px]:gap-[18.5px] min-[768px]:gap-[14.56px] gap-[10px] max-[1600px]:items-center bg-cover bg-no-repeat bg-center z-10">
             {questions.map((q, index) => (
-              <QuestionCard
+              <div
                 key={q.id}
-                number={index + 1}
-                question={q.question}
-                answer={q.answer}
-                isOpen={openQuestion === q.id}
-                onToggle={() => handleToggle(q.id)}
-              />
+                className={`transition-all duration-700 hover:scale-[1.02] hover:shadow-lg ${
+                  questionStates[index]
+                    ? "opacity-100 translate-y-0 scale-100"
+                    : "opacity-0 translate-y-4 scale-95"
+                }`}
+              >
+                <QuestionCard
+                  number={index + 1}
+                  question={q.question}
+                  answer={q.answer}
+                  isOpen={openQuestion === q.id}
+                  onToggle={() => handleToggle(q.id)}
+                />
+              </div>
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-[10px] min-[1600px]:mb-[43px] min-[768px]:mb-[27px] mb-[29px] z-10">
+        <div
+          className={`flex flex-col gap-[10px] min-[1600px]:mb-[43px] min-[768px]:mb-[27px] mb-[29px] z-10 transition-all duration-1000 delay-800 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <p className="min-[1600px]:text-[47.04px] min-[768px]:text-[35px] text-[24px] font-bold leading-[115%] min-[1600px]:tracking-[-1.6px] tracking-[-1.2px] text-center">
             <span className="font-normal">Воспользуйтесь </span>{" "}
             <br className="md:hidden" />
@@ -77,7 +164,13 @@ export const Questions = () => {
             за который сервис оптимизирует вашу рекламу и оцифрует ваш кабинет
           </p>
         </div>
-        <div className="flex items-center justify-center gap-[14.15px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] min-[1600px]:w-[453px] min-[1600px]:h-[105px] min-[768px]:w-[333.71px] min-[768px]:h-[77.35px] w-[320.23px] h-[83.25px] min-[768px]:rounded-[17.57px] rounded-[13.87px] z-10">
+        <div
+          className={`flex items-center justify-center gap-[14.15px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] min-[1600px]:w-[453px] min-[1600px]:h-[105px] min-[768px]:w-[333.71px] min-[768px]:h-[77.35px] w-[320.23px] h-[83.25px] min-[768px]:rounded-[17.57px] rounded-[13.87px] z-10 transition-all duration-1000 delay-1000 hover:scale-105 hover:shadow-lg ${
+            isVisible
+              ? "opacity-100 translate-y-0 scale-100"
+              : "opacity-0 translate-y-4 scale-95"
+          }`}
+        >
           <svg
             viewBox="0 0 54 39"
             fill="none"

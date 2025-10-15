@@ -1,9 +1,17 @@
 import React from "react";
 
-export const BigCardItemsCardMobile = () => {
+export const BigCardItemsCardMobile = ({
+  cardStates = [false, false, false, false],
+}) => {
   return (
     <div className="hidden max-[768px]:flex min-[360px]:flex-col min-[1600px]:flex-row gap-2 min-[768px]:gap-[10px] min-[1600px]:gap-0 items-center mt-[19px] min-[768px]:mt-[29px] min-[1600px]:mt-[16px]">
-      <div className="mr-[26px] relative flex flex-col gap-[6px] min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#49BCFF] p-[16.86px] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[12.89px] w-[230px] min-[768px]:w-[313px] min-[1600px]:w-[360px] text-white">
+      <div
+        className={`mr-[26px] relative flex flex-col gap-[6px] min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#49BCFF] p-[16.86px] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[12.89px] w-[230px] min-[768px]:w-[313px] min-[1600px]:w-[360px] text-white transition-all duration-500 hover:scale-105 hover:shadow-lg ${
+          cardStates[0]
+            ? "opacity-100 translate-y-0 scale-100"
+            : "opacity-0 translate-y-4 scale-95"
+        }`}
+      >
         <div className="flex items-center gap-[5.66px] pl-2">
           <svg
             width="21"
@@ -36,7 +44,13 @@ export const BigCardItemsCardMobile = () => {
         <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -right-[2px]"></div>
       </div>
       <div className="min-[768px]:mr-[104px] min-[1600px]:mr-0 flex gap-2 min-[1600px]:gap-0">
-        <div className="relative flex flex-col gap-[6px] min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#4C3AFF] p-[16.86px] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[12.89px] w-[154.45px] min-[768px]:w-[210px] min-[1600px]:w-[241px] text-white">
+        <div
+          className={`relative flex flex-col gap-[6px] min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#4C3AFF] p-[16.86px] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[12.89px] w-[154.45px] min-[768px]:w-[210px] min-[1600px]:w-[241px] text-white transition-all duration-500 hover:scale-105 hover:shadow-lg ${
+            cardStates[1]
+              ? "opacity-100 translate-y-0 scale-100"
+              : "opacity-0 translate-y-4 scale-95"
+          }`}
+        >
           <div className="flex items-center gap-[5.66px] pl-2">
             <svg
               width="21"
@@ -68,7 +82,13 @@ export const BigCardItemsCardMobile = () => {
           <div className="rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -left-[2px]"></div>
           <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -right-[2px]"></div>
         </div>
-        <div className="relative flex flex-col gap-[6px] min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#4C3AFF] p-[16.86px] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[12.89px] w-[154.45px] min-[768px]:w-[210px] min-[1600px]:w-[241px] text-white">
+        <div
+          className={`relative flex flex-col gap-[6px] min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#4C3AFF] p-[16.86px] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[12.89px] w-[154.45px] min-[768px]:w-[210px] min-[1600px]:w-[241px] text-white transition-all duration-500 hover:scale-105 hover:shadow-lg ${
+            cardStates[2]
+              ? "opacity-100 translate-y-0 scale-100"
+              : "opacity-0 translate-y-4 scale-95"
+          }`}
+        >
           <div className="flex items-center gap-[5.66px] pl-2">
             <svg
               width="21"
@@ -101,7 +121,13 @@ export const BigCardItemsCardMobile = () => {
           <div className="z-10 rounded-[100px] h-[62px] w-[4px] bg-[#d2dbff] absolute top-1/2 -translate-y-1/2 -right-[2px]"></div>
         </div>
       </div>
-      <div className="ml-[44px] relative flex flex-col gap-[6px] min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#49BCFF] p-[16.86px] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[12.89px] w-[230px] min-[768px]:w-[313px] min-[1600px]:w-[360px] text-white">
+      <div
+        className={`ml-[44px] relative flex flex-col gap-[6px] min-[768px]:gap-2 min-[1600px]:gap-[10px] bg-[#49BCFF] p-[16.86px] min-[768px]:p-[22px] min-[1600px]:p-[26px] rounded-[12.89px] w-[230px] min-[768px]:w-[313px] min-[1600px]:w-[360px] text-white transition-all duration-500 hover:scale-105 hover:shadow-lg ${
+          cardStates[3]
+            ? "opacity-100 translate-y-0 scale-100"
+            : "opacity-0 translate-y-4 scale-95"
+        }`}
+      >
         <div className="flex items-center gap-[5.66px] pl-2">
           <svg
             width="21"
