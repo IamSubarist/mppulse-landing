@@ -1,9 +1,17 @@
 import React from "react";
 
-export const MonitoringCard = ({ title, description, data }) => {
+export const MonitoringCard = ({ title, description, data, numb }) => {
   return (
     <div className="mt-[44px] relative flex flex-col items-center justify-center">
-      <div className="min-h-[425px] z-20 shadow-xl rounded-[25px] bg-white flex flex-col min-[768px]:px-[38px] min-[1600px]:px-[44px] min-[768px]:py-[44px_36px] min-[1600px]:py-[44px_44px]">
+        <div className="bg-white text-blue-500 rounded-full w-[60px] h-[60px] absolute top-[-30px] left-[58px] z-30 text-center">
+          <h3 className="text-[24px] pt-[22%] font-bold">{numb}</h3>
+        </div>
+      <div className="min-h-[425px] z-20 shadow-xl rounded-[25px] bg-white flex flex-col min-[768px]:px-[38px] min-[1600px]:px-[44px] min-[768px]:py-[44px_36px] min-[1600px]:py-[44px_44px]"
+      style={{
+        maskImage: 'radial-gradient(ellipse 40px 40px at 88px 0%, transparent 100%, black 100%)',
+        maskSize: '100% 100%',
+        maskRepeat: 'no-repeat'
+      }}>
         <div className="flex flex-col min-[768px]:gap-[9.95px] min-[1600px]:gap-[13px] min-[768px]:mb-[26.84px] min-[1600px]:mb-[30px]">
           <p className="text-[#1D1D1D] min-[768px]:text-[21.51px] min-[1600px]:text-[24px] font-bold leading-[110%] tracking-[-0.6px]">
             {title}
@@ -103,7 +111,7 @@ export const MonitoringCard = ({ title, description, data }) => {
           </button>
         </div>
       </div>
-      <div className="shadow-xl z-10 absolute top-0 right-1/2 translate-x-1/2 w-[calc(100%-38px)] h-[calc(100%+15px)] rounded-[25px] bg-white opacity-50"></div>
+      <div className="shadow-xl z-10 absolute top-0 right-1/2 translate-x-1/2 w-[calc(100%-38px)] h-[calc(100%-25px)] rounded-[25px] bg-white opacity-50 mt-[40px]"></div>
     </div>
   );
 };

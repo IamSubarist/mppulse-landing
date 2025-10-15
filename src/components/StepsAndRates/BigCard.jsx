@@ -2,11 +2,20 @@ import React from "react";
 import StepOne from "../../assets/StepOne.png";
 import StepTwo from "../../assets/StepTwo.png";
 import StepThree from "../../assets/StepThree.png";
-
+import steam from "../../assets/staem.svg"
 export const BigCard = () => {
   return (
     <div className="relative flex flex-col items-center justify-center">
-      <div id="howItWork" className="shadow-xl min-[768px]:pt-[62px] min-[1600px]:pt-[120px] min-[768px]:rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[40px] min-[1600px]:px-[120px] py-[44px_44px] min-[768px]:py-[44px_42px] min-[1600px]:py-[44px_118px] gap-[10px] min-[768px]:gap-[8px] min-[1600px]:gap-[10px]">
+        <div className=" text-blue-500 rounded-full w-[75px] h-[55px] absolute top-[-30px] min-[1600px]:left-[48%] min-[768px]:left-[46%] left-[46%] z-30">
+          <img src={steam} alt="icon" className="w-[58px] h-[58px]"/>
+        </div>
+      <div id="howItWork" className="shadow-xl min-[768px]:pt-[62px] min-[1600px]:pt-[120px] min-[768px]:rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[40px] min-[1600px]:px-[120px] py-[44px_44px] min-[768px]:py-[44px_42px] min-[1600px]:py-[44px_118px] gap-[10px] min-[768px]:gap-[8px] min-[1600px]:gap-[10px]"
+        style={{
+        maskImage: 'radial-gradient(ellipse 50px 50px at 50% 0%, transparent 100%, black 100%)',
+        maskSize: '100% 100%',
+        maskRepeat: 'no-repeat'
+      }}
+      >
         <div className="text-[24px] min-[768px]:text-[30px] min-[1600px]:text-[47.04px] tracking-[-1.3px] text-center">
           <p className="text-[#1D1D1D] leading-[115%] tracking-[-1px] max-[768px]:px-10 max-[768px]:pt-[6px]">
             <span className="text-[#000000] font-bold leading-[115%]">
@@ -163,7 +172,7 @@ export const BigCard = () => {
           </div>
         </div>
       </div>
-      <div className="hidden min-[768px]:block shadow-xl -z-10 absolute top-0 right-1/2 translate-x-1/2 w-[calc(100%-120px)] h-[calc(100%+25px)] rounded-[25px] bg-white opacity-50"></div>
+      <div className="hidden min-[768px]:block shadow-xl -z-10 absolute top-0 right-1/2 translate-x-1/2 w-[calc(100%-120px)] h-[calc(100%-25px)] rounded-[25px] bg-white opacity-50 mt-[50px]"></div>
     </div>
   );
 };

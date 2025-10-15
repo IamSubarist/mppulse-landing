@@ -1,10 +1,20 @@
 import React from "react";
 import { BigCardItemsCardMobile } from "./BigCardItemsCardMobile";
+import light from "../../assets/light.svg";
 
-export const BigCard = () => {
+export const BigCard = (icon) => {
   return (
     <div className="relative flex flex-col items-center justify-center">
-      <div className="z-20 min-[768px]:pt-[70px] min-[1600px]:pt-[120px] shadow-xl min-[768px]:h-[605px] min-[768px]:rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[34px] min-[1600px]:px-[120px] py-[44px] gap-2 min-[768px]:gap-[10px] min-[1600px]:gap-[20px]">
+        <div className=" text-blue-500 rounded-full w-[75px] h-[55px] absolute top-[-20px] min-[1600px]:left-[47.6%] min-[768px]:left-[45.2%] left-[40%] z-30">
+          <img src={light} alt="icon" className="w-[70px] h-[52px]"/>
+        </div>
+      <div className="z-20 min-[768px]:pt-[70px] min-[1600px]:pt-[120px] shadow-xl min-[768px]:h-[605px] min-[768px]:rounded-[25px] bg-white flex flex-col items-center min-[768px]:px-[34px] min-[1600px]:px-[120px] py-[44px] gap-2 min-[768px]:gap-[10px] min-[1600px]:gap-[20px]"
+        style={{
+        maskImage: 'radial-gradient(ellipse 50px 50px at 50% 0%, transparent 100%, black 100%)',
+        maskSize: '100% 100%',
+        maskRepeat: 'no-repeat'
+      }}
+      >
         <div className="text-[21px] min-[768px]:text-[35px] min-[1600px]:text-[47.04px] min-[360px]:w-[360px] min-[768px]:w-[500px] min-[1600px]:w-[677px] w-[677px] tracking-[-1.3px] text-center">
           <p className="text-[#1D1D1D] leading-[115%] max-[768px]:w-[260px] mx-auto">
             Сервис, который
@@ -185,7 +195,7 @@ export const BigCard = () => {
         </div>
         <BigCardItemsCardMobile />
       </div>
-      <div className="max-[768px]:hidden shadow-xl z-10 absolute top-0 right-1/2 translate-x-1/2 w-[calc(100%-120px)] h-[calc(100%+25px)] rounded-[25px] bg-white opacity-50"></div>
+      <div className="max-[768px]:hidden shadow-xl z-10 absolute top-0 right-1/2 translate-x-1/2 w-[calc(100%-120px)] h-[calc(100%-25px)] rounded-[25px] bg-white opacity-50 mt-[50px]"></div>
     </div>
   );
 };
