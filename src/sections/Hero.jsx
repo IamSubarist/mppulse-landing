@@ -1,5 +1,5 @@
 import { Switch } from "antd";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HeroImg from "../assets/hero-img.png";
 import HeroImg768 from "../assets/hero-img-768.png";
 import HeroImg360 from "../assets/hero-img-360.png";
@@ -10,23 +10,68 @@ import ModalSlider from "../components/Modal/ModalSlider";
 
 export const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [switchStates, setSwitchStates] = useState([
+    false,
+    false,
+    false,
+    false,
+  ]);
+
+  useEffect(() => {
+    // Анимация появления всей секции
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+
+    // Анимация свитчей с задержкой
+    const switchDelays = [800, 1000, 1200, 1400]; // Задержки для каждого свитча
+
+    switchDelays.forEach((delay, index) => {
+      setTimeout(() => {
+        setSwitchStates((prev) => {
+          const newStates = [...prev];
+          newStates[index] = true;
+          return newStates;
+        });
+      }, delay);
+    });
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
   return (
     <div className="hero-section min-[360px]:px-[20px] min-[768px]:px-[4%] min-[1600px]:px-[18.7%] relative pb-[274.4px]">
       <Header />
-      <div className="flex flex-col max-w-[780.93px] mt-1">
-        <p className="text-[30.06px] min-[768px]:text-[47.04px] leading-[114%] mb-[15px] min-[768px]:mb-[24.15px] tracking-[-0.6px]">
+      <div
+        className={`flex flex-col max-w-[780.93px] mt-1 transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      >
+        <p
+          className={`text-[30.06px] min-[768px]:text-[47.04px] leading-[114%] mb-[15px] min-[768px]:mb-[24.15px] tracking-[-0.6px] transition-all duration-1000 delay-200 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
           Ваш личный{" "}
           <span className="font-semibold">AI менеджер-аналитик,</span> который
           работает 24/7
         </p>
-        <div className="flex items-start gap-[10px] min-[768px]:gap-[17.57px] mb-[18px] min-[768px]:mb-[32.71px]">
+        <div
+          className={`flex items-start gap-[10px] min-[768px]:gap-[17.57px] mb-[18px] min-[768px]:mb-[32.71px] transition-all duration-1000 delay-400 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
           <svg
             width="15"
             height="15"
             viewBox="0 0 15 15"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="size-[12px] min-[768px]:size-[15px] mt-[5px]"
+            className={`size-[12px] min-[768px]:size-[15px] mt-[5px] transition-all duration-500 delay-600 ${
+              isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
+            }`}
           >
             <path
               opacity="0.2"
@@ -43,34 +88,66 @@ export const Hero = () => {
             делать
           </p>
         </div>
-        <div className="flex flex-wrap max-w-[651.6px] gap-[7px] min-[768px]:gap-[13.27px] mb-[21px] min-[768px]:mb-[35.28px]">
-          <div className="bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[55.27px] min-[768px]:h-[60.38px]">
-            <Switch checked={true} />
+        <div
+          className={`flex flex-wrap max-w-[651.6px] gap-[7px] min-[768px]:gap-[13.27px] mb-[21px] min-[768px]:mb-[35.28px] transition-all duration-1000 delay-600 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          <div
+            className={`bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[55.27px] min-[768px]:h-[60.38px] transition-all duration-500 ${
+              switchStates[0]
+                ? "scale-100 opacity-100 shadow-lg"
+                : "scale-95 opacity-70"
+            }`}
+          >
+            <Switch checked={switchStates[0]} />
             <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px] max-[768px]:leading-[110%]">
               Оцифровка кабинета
             </p>
           </div>
-          <div className="bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[55.27px] min-[768px]:h-[60.38px]">
-            <Switch checked={true} />
+          <div
+            className={`bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[55.27px] min-[768px]:h-[60.38px] transition-all duration-500 ${
+              switchStates[1]
+                ? "scale-100 opacity-100 shadow-lg"
+                : "scale-95 opacity-70"
+            }`}
+          >
+            <Switch checked={switchStates[1]} />
             <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px] max-[768px]:leading-[110%]">
               Анализ всех конверсий
             </p>
           </div>
-          <div className="bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[55.27px] min-[768px]:h-[60.38px]">
-            <Switch checked={true} />
+          <div
+            className={`bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[311.2px] h-[55.27px] min-[768px]:h-[60.38px] transition-all duration-500 ${
+              switchStates[2]
+                ? "scale-100 opacity-100 shadow-lg"
+                : "scale-95 opacity-70"
+            }`}
+          >
+            <Switch checked={switchStates[2]} />
             <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px] max-[768px]:leading-[110%]">
               Оптимизация рекламы
             </p>
           </div>
-          <div className="bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[55.27px] min-[768px]:h-[60.38px]">
-            <Switch checked={true} />
+          <div
+            className={`bg-white flex items-center pl-[13.6px] min-[768px]:pl-[17.92px] gap-[9.38px] min-[768px]:gap-[13.27px] rounded-[16.59px] w-[156.12px] min-[768px]:w-[327.12px] h-[55.27px] min-[768px]:h-[60.38px] transition-all duration-500 ${
+              switchStates[3]
+                ? "scale-100 opacity-100 shadow-lg"
+                : "scale-95 opacity-70"
+            }`}
+          >
+            <Switch checked={switchStates[3]} />
             <p className="text-[13.58px] min-[768px]:text-[19.67px] font-semibold tracking-[-0.6px] max-[768px]:leading-[110%]">
               Поиск причин и решений
             </p>
           </div>
         </div>
-        <div className="relative min-[768px]:ml-[5px]">
-          <div className="relative z-20 flex items-center justify-center gap-[14.15px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] w-[320px] min-[768px]:w-[405.58px] h-[83px] min-[768px]:h-[105.44px] rounded-[17.57px]">
+        <div
+          className={`relative min-[768px]:ml-[5px] transition-all duration-1000 delay-800 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+        >
+          <div className="relative z-20 flex items-center justify-center gap-[14.15px] bg-[linear-gradient(90deg,_#4C3AFF_-4.57%,_#49BCFF_93.01%)] w-[320px] min-[768px]:w-[405.58px] h-[83px] min-[768px]:h-[105.44px] rounded-[17.57px] hover:scale-105 transition-transform duration-300 cursor-pointer">
             <svg
               width="54"
               height="39"
@@ -123,12 +200,12 @@ export const Hero = () => {
         alt="hero"
       />
       <img
-        className=" min-[360px]:hidden min-[768px]:block min-[1600px]:hidden z-[30] w-[100%] absolute top-10 min-[768px]:-top-8 left-5"
+        className=" min-[360px]:hidden min-[768px]:block min-[1600px]:hidden z-[30] w-[100%] absolute top-10 min-[768px]:top-144 left-0"
         src={HeroImg768}
         alt="hero"
       />
       <img
-        className=" min-[360px]:block min-[768px]:hidden z-[30] w-[100%] absolute top-131 left-0"
+        className=" min-[360px]:block min-[768px]:hidden z-[30] w-[100%] absolute top-138 left-0"
         src={HeroImg360}
         alt="hero"
       />
